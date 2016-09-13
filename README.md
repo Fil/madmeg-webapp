@@ -13,6 +13,11 @@ Web apps for [madmeg](http://madmeg.org/).
 [![](simone/vignette-1200x630.jpg)](http://madmeg.org/simone/)
 
 
+## Christine de Pizan
+
+[![](christine/vignette-1200x630.jpg)](http://madmeg.org/christine/)
+
+
 
 # Lipido
 
