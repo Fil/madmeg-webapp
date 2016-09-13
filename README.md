@@ -55,6 +55,11 @@ Web apps for [madmeg](http://madmeg.org/).
 [![](lippido/vignette-1200x630.jpg)](http://madmeg.org/lippido/)
 
 
+# Mad Meg by madmeg
+
+[![](lenragee/vignette-1200x630.jpg)](http://madmeg.org/lenragee/)
+
+
 # Les époux Arnolfini
 
 [![](epoux/vignette-1200x630.jpg)](http://madmeg.org/epoux/)
