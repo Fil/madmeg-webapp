@@ -1,6 +1,11 @@
 Web apps for [madmeg](http://madmeg.org/).
 
 
+## Le Jardin des délices
+
+[![](delizie/vignette-1200x630.jpg)](http://madmeg.org/delizie/)
+
+
 # Les Athéniennes
 
 ## Jac Sm Kee
@@ -18,7 +23,7 @@ Web apps for [madmeg](http://madmeg.org/).
 [![](christine/vignette-1200x630.jpg)](http://madmeg.org/christine/)
 
 
-# Les patriarches
+# Les Patriarches
 
 ## Patriarche 40
 
