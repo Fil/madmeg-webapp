@@ -45,6 +45,11 @@ Web apps for [madmeg](http://madmeg.org/).
 [![](p40/vignette-1200x630.jpg)](http://madmeg.org/p40/)
 
 
+## La leçon de pornographie
+
+[![](lecon/vignette-1200x630.jpg)](http://madmeg.org/lecon/)
+
+
 # Lippido
 
 [![](lippido/vignette-1200x630.jpg)](http://madmeg.org/lippido/)
