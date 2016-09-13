@@ -12,3 +12,8 @@ Web apps for [madmeg](http://madmeg.org/).
 
 [![](simone/vignette-1200x630.jpg)](http://madmeg.org/simone/)
 
+
+
+# Lipido
+
+[![](lipido/vignette-1200x630.jpg)](http://madmeg.org/lipido/)
