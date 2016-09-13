@@ -8,6 +8,11 @@ Web apps for [madmeg](http://madmeg.org/).
 
 # Les Athéniennes
 
+## Angela &amp; Olympe
+
+[![](athena/vignette-1200x630.jpg)](http://madmeg.org/athena/)
+
+
 ## Jac Sm Kee
 
 [![](jacsmkee/vignette-1200x630.jpg)](http://madmeg.org/jacsmkee/)
@@ -30,7 +35,8 @@ Web apps for [madmeg](http://madmeg.org/).
 [![](p40/vignette-1200x630.jpg)](http://madmeg.org/p40/)
 
 
-
 # Lipido
 
 [![](lipido/vignette-1200x630.jpg)](http://madmeg.org/lipido/)
+
+
