@@ -35,6 +35,11 @@ Web apps for [madmeg](http://madmeg.org/).
 
 # Les Patriarches
 
+## Patriarche n° 4
+
+[![](p4/vignette-1200x630.jpg)](http://madmeg.org/p4/)
+
+
 ## Patriarche 40
 
 [![](p40/vignette-1200x630.jpg)](http://madmeg.org/p40/)
