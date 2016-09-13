@@ -1,9 +1,14 @@
 Web apps for [madmeg](http://madmeg.org/).
 
 
-## Le Jardin des délices
+# Le Jardin des délices
 
 [![](delizie/vignette-1200x630.jpg)](http://madmeg.org/delizie/)
+
+
+# Feast of fools
+
+[![](feastoffools/vignette-1200x630.jpg)](http://madmeg.org/feastoffools/)
 
 
 # Les Athéniennes
