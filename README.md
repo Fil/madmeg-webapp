@@ -35,9 +35,9 @@ Web apps for [madmeg](http://madmeg.org/).
 [![](p40/vignette-1200x630.jpg)](http://madmeg.org/p40/)
 
 
-# Lipido
+# Lippido
 
-[![](lipido/vignette-1200x630.jpg)](http://madmeg.org/lipido/)
+[![](lippido/vignette-1200x630.jpg)](http://madmeg.org/lippido/)
 
 
 # Les époux Arnolfini
