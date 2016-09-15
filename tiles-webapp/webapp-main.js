@@ -464,8 +464,8 @@ function openwindow() {
 	    buttonCancel: ' ',
 	    callback: function() {}
 	})
-	infowindow.content.on('click', function() {
-	    infowindow.close();
+	$('.modal').on('click', function() {
+	    setTimeout(function() { infowindow.close(); },10);
 	});
 	return false;
 }
