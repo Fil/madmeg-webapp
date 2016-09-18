@@ -1,5 +1,6 @@
 $('body').append('<div id=map>');
 
+// envoyer sur le tileserver madmeg.org si on tourne en localhost
 if (window.location.hostname == 'localhost')
     tileserver = tileserver.replace(/^\.\.\//, 'http://madmeg.org/')
 
