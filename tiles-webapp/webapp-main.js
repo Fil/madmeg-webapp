@@ -458,9 +458,9 @@ L.control.window = function (container,options) {
 
 
 var infowindow;
-function openwindow() {
+function openwindow(cartel) {
     infowindow = L.control.window(map,{title: '',
-       content:'<div style="width:500px; height: 300px;"><a href="#" onclick="infowindow.close(); return false;"><img src="cartel.jpg" style="width: 500px; height: auto;"></a></div>', visible: false, modal: true, closeButton: false });
+       content:'<div style="width:500px; height: 300px;"><a href="#" onclick="infowindow.close(); return false;"><img src="' + cartel + '" style="width: 500px; height: auto;"></a></div>', visible: false, modal: true, closeButton: false });
 	infowindow
 	.show()
 	.prompt({
@@ -486,7 +486,7 @@ if (typeof cartel == 'string') {
     var info = L.control({position: 'topleft'});
         info.onAdd = function (map) {
         this._div = L.DomUtil.create('div', 'leaflet-control leaflet-bar leaflet-control-legend');
-        this._div.innerHTML = '<a class="leaflet-control-info" href="#" title="info" style="opacity: 1;" onclick="return openwindow();">?</a>';
+        this._div.innerHTML = '<a class="leaflet-control-info" href="#" title="info" style="opacity: 1;" onclick="return openwindow(\'' + cartel + '\');">?</a>';
         return this._div;
     };
     info.addTo(this.map);
