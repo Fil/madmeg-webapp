@@ -478,11 +478,6 @@ function openwindow(cartel) {
 
 if (typeof cartel == 'string') {
 
-/*
-
-.leaflet-control-legend a,.leaflet-control-legend a:focus,.leaflet-control-legend a:hover{width:auto;padding:0 5px;background:#fff}
-
-*/
     var info = L.control({position: 'topleft'});
         info.onAdd = function (map) {
         this._div = L.DomUtil.create('div', 'leaflet-control leaflet-bar leaflet-control-legend');
