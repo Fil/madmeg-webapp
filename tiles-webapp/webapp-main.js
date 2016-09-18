@@ -1,5 +1,8 @@
 $('body').append('<div id=map>');
 
+if (window.location.hostname == 'localhost')
+    tileserver = tileserver.replace(/^\.\.\//, 'http://madmeg.org/')
+
 // disable clic-droit
 document.oncontextmenu = function () {
     return false
