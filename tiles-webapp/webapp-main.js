@@ -475,18 +475,18 @@ function openwindow(cartel) {
 }
 
 
+    var home = L.control({position: 'topleft'});
+    home.onAdd = function (map) {
+        this._div = L.DomUtil.create('div', 'leaflet-control leaflet-bar');
+        var buttons = '';
+        if (typeof cartel == 'string') {
+            buttons = '<a class="leaflet-control-info" href="#" title="info" style="opacity: 1;" onclick="return openwindow(\'' + cartel + '\');">?</a>';
+        }
+        
+        buttons += '<a class="leaflet-control-home" href="/" title="home" style="opacity: 1;">H</a>';
 
-if (typeof cartel == 'string') {
-
-    var info = L.control({position: 'topleft'});
-        info.onAdd = function (map) {
-        this._div = L.DomUtil.create('div', 'leaflet-control leaflet-bar leaflet-control-legend');
-        this._div.innerHTML = '<a class="leaflet-control-info" href="#" title="info" style="opacity: 1;" onclick="return openwindow(\'' + cartel + '\');">?</a>';
+        this._div.innerHTML = buttons;
         return this._div;
     };
-    info.addTo(this.map);
-
-
-/* */
-}
+    home.addTo(this.map);
 
