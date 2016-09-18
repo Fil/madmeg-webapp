@@ -35,7 +35,8 @@ Web apps for [madmeg](http://madmeg.org/).
 
 ## Fukushima *
 
-## Roy
+## Roy *
+
 
 # Charognes
 
@@ -83,9 +84,9 @@ Web apps for [madmeg](http://madmeg.org/).
 
 # Panoramas
 
-## Lisboa
+## Lisboa *
 
-## Shanghai
+## Shanghai *
 
 
 # Les Patriarches
