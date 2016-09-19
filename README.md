@@ -7,7 +7,7 @@ Web apps for [madmeg](http://madmeg.org/).
 [![](athena/vignette-1200x630.jpg)](http://madmeg.org/athena/)
 
 
-## Jac Sm Kee (2015)
+## Jac sm Kee (2015)
 
 <!-- [![](jacsmkee/vignette-1200x630.jpg)](http://madmeg.org/jacsmkee/) -->
 
@@ -72,14 +72,12 @@ Web apps for [madmeg](http://madmeg.org/).
 [![](lenragee/vignette-1200x630.jpg)](http://madmeg.org/lenragee/)
 
 
-## Les époux Arnolfini
+## Qu’est-ce qui peut bien rendre nos intérieurs… (2005)
 
 [![](epoux/vignette-1200x630.jpg)](http://madmeg.org/epoux/)
 
 
 ## Les Trois Garces (2010) *
-
-## Qu’est-ce qui peut bien rendre nos intérieurs… (2005) *
 
 
 # Panoramas
