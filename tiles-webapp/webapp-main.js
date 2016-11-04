@@ -38,11 +38,19 @@ testoffline = false;
 
 var worldpixels = tileSize * Math.pow(2, maxZoom);
 
-var map = new L.Map('map', {
+var config = {
     minZoom: minZoom,
     maxZoom: maxZoom,
-    crs: L.CRS.Simple
-});
+};
+
+if (typeof panorama360 !== 'undefined' && panorama360) {
+    panorama360 = true;
+} else {
+    panorama360 = false;
+    config.crs = L.CRS.Simple;
+}
+
+var map = new L.Map('map', config);
 
 var hash = new L.Hash(map); // hash in the URL
 
@@ -75,8 +83,8 @@ map.addControl(new L.Control.FullScreen());
 
 var jardin = new L.TileLayer(tileserver, {
     attribution: 'madmeg',
-    continuousWorld: false,
-    noWrap: true,
+    continuousWorld: panorama360,
+    noWrap: !panorama360,
     tileSize: tileSize,
     detectRetina: retina,
     tms: false, // sens de l'axe vertical
@@ -90,8 +98,8 @@ map.addLayer(jardin);
 if (retina) {
     var jardinz = new L.TileLayer(tileserver, {
         attribution: 'madmeg',
-        continuousWorld: false,
-        noWrap: true,
+        continuousWorld: panorama360,
+        noWrap: !panorama360,
         tileSize: tileSize,
         detectRetina: false,
         tms: false,
