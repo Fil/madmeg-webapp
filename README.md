@@ -26,7 +26,6 @@ Web apps for [madmeg](http://madmeg.org/).
 
 ## Olympe de Gouges (2013) *
 
-
 # Chambre
 
 ## La Clé de ma Chambre (2015) *
@@ -40,7 +39,7 @@ Web apps for [madmeg](http://madmeg.org/).
 
 # Charognes
 
-## Une Charogne à Fezouata (2016) *
+## Une Charogne à Fezouata (2016)
 
 ## Le Phoque Mort (2013) *
 

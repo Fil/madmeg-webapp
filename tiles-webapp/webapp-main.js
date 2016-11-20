@@ -491,7 +491,7 @@ function openwindow(cartel) {
             buttons = '<a class="leaflet-control-info" href="#" title="info" style="opacity: 1;" onclick="return openwindow(\'' + cartel + '\');">?</a>';
         }
         
-        buttons += '<a class="leaflet-control-home" href="/" title="home" style="opacity: 1;">H</a>';
+       // buttons += '<a class="leaflet-control-home" href="/" title="home" style="opacity: 1;">H</a>';
 
         this._div.innerHTML = buttons;
         return this._div;
