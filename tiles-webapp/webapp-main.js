@@ -466,9 +466,10 @@ L.control.window = function (container,options) {
 
 
 var infowindow;
-function openwindow(cartel) {
-    infowindow = L.control.window(map,{title: '',
-       content:'<div style="width:500px; height: 300px;"><a href="#" onclick="infowindow.close(); return false;"><img src="' + cartel + '" style="width: 500px; height: auto;"></a></div>', visible: false, modal: true, closeButton: false });
+function openwindow(cartel, height) {
+	height = height || 300;
+	infowindow = L.control.window(map,{title: '',
+       content:'<div style="width:500px; height: ' + height + 'px;"><a href="#" onclick="infowindow.close(); return false;"><img src="' + cartel + '" style="width: 500px; height: auto;"></a></div>', visible: false, modal: true, closeButton: false });
 	infowindow
 	.show()
 	.prompt({
@@ -482,14 +483,22 @@ function openwindow(cartel) {
 	return false;
 }
 
-
     var home = L.control({position: 'topleft'});
     home.onAdd = function (map) {
         this._div = L.DomUtil.create('div', 'leaflet-control leaflet-bar');
         var buttons = '';
         if (typeof cartel == 'string') {
-            buttons = '<a class="leaflet-control-info" href="#" title="info" style="opacity: 1;" onclick="return openwindow(\'' + cartel + '\');">?</a>';
+            buttons += '<a class="leaflet-control-cartel" href="#" title="cartel" style="opacity: 1;" onclick="return openwindow(\'' + cartel + '\');">?</a>';
         }
+        if (typeof infos == 'string') {
+            buttons += '<a class="leaflet-control-infos" href="#" title="infos" style="opacity: 1;" onclick="return openwindow(\'' + infos + '\', 390);">i</a>';
+        }
+        if (typeof shop == 'string') {
+            buttons += '<a class="leaflet-control-shop" href="' + shop + '" title="shop" style="opacity: 1;">$</a>';
+        }
+        
+        // en dernier, home page
+        buttons += '<a class="leaflet-control-home" href="http://madmeg.org/" title="madmeg.org" style="opacity: 1;">H</a>';
         
        // buttons += '<a class="leaflet-control-home" href="/" title="home" style="opacity: 1;">H</a>';
 

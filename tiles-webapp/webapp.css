@@ -1,5 +1,34 @@
 html, body, #map { width: 100%; height: 100%; margin: 0; padding: 0; background-color: white; }
-.leaflet-control-zoom-fullscreen { background-image: url(../tiles-webapp/images/icon-fullscreen.png); }
+.leaflet-control-zoom-fullscreen { background-image: url(../tiles-webapp/images/icon-fullscreen.png);
+}
+.leaflet-control-zoom-in { background-image: url(../tiles-webapp/images/icon-zoom-in.png);
+}
+.leaflet-control-zoom-out { background-image: url(../tiles-webapp/images/icon-zoom-out.png);
+}
+.leaflet-control-cartel { background-image: url(../tiles-webapp/images/icon-cartel.png);
+}
+.leaflet-control-infos { background-image: url(../tiles-webapp/images/icon-infos.png);
+}
+.leaflet-control-home { background-image: url(../tiles-webapp/images/icon-home.png);
+}
+.leaflet-control-shop { background-image: url(../tiles-webapp/images/icon-shop.png);
+}
+
+
+.leaflet-bar a, .leaflet-bar a:hover {
+    background-color: #fff;
+    border-bottom: 1px solid #ccc;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    color: transparent !important;
+}
+
+.leaflet-bar a.leaflet-control-home, .leaflet-bar a.leaflet-control-home:hover {
+    height: 60px;
+    line-height: 48px;
+}
+
 
 /* on selector per rule as explained here : http://www.sitepoint.com/html5-full-screen-api/ */
 #map:-webkit-full-screen { width: 100% !important; height: 100% !important; }

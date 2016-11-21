@@ -41,6 +41,9 @@ Web apps for [madmeg](http://madmeg.org/).
 
 ## Une Charogne à Fezouata (2016)
 
+[![](fezouata/vignette-1200x630.jpg)](http://madmeg.org/fezouata/)
+
+
 ## Le Phoque Mort (2013) *
 
 
