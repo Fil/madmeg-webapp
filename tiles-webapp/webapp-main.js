@@ -491,7 +491,7 @@ function openwindow(cartel, height) {
             buttons += '<a class="leaflet-control-cartel" href="#" title="cartel" style="opacity: 1;" onclick="return openwindow(\'' + cartel + '\');">?</a>';
         }
         if (typeof infos == 'string') {
-            buttons += '<a class="leaflet-control-infos" href="#" title="infos" style="opacity: 1;" onclick="return openwindow(\'' + infos + '\', 390);">i</a>';
+            buttons += '<a class="leaflet-control-infos" href="#" title="infos" style="opacity: 1;" onclick="return openwindow(\'' + infos + '\', 430);">i</a>';
         }
         if (typeof shop == 'string') {
             buttons += '<a class="leaflet-control-shop" href="' + shop + '" title="shop" style="opacity: 1;">$</a>';
