@@ -66,7 +66,7 @@ Web apps for [madmeg](http://madmeg.org/).
 
 ## Lippido (2006)
 
-<!-- [![](lippido/vignette-1200x630.jpg)](http://madmeg.org/lippido/) -->
+[![](lippido/vignette-1200x630.jpg)](http://madmeg.org/lippido/)
 
 
 ## Mad Meg by madmeg (2005)
