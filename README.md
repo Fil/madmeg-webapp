@@ -91,6 +91,10 @@ Web apps for [madmeg](http://madmeg.org/).
 
 # Les Patriarches
 
+## Patriarche n° 2 (2016)
+
+<!-- [![](p2/vignette-1200x630.jpg)](http://madmeg.org/p2/) -->
+
 ## Patriarche n° 4 (2013)
 
 [![](p4/vignette-1200x630.jpg)](http://madmeg.org/p4/)
@@ -107,6 +111,10 @@ Web apps for [madmeg](http://madmeg.org/).
 
 ## Patriarche 14 (2005) *
 
+## Patriarche 17 (2016)
+
+<!-- [![](p17/vignette-1200x630.jpg)](http://madmeg.org/p17/) -->
+
 ## Patriarche 31 (2006) *
 
 ## Patriarche 32 (2006) *
@@ -116,6 +124,14 @@ Web apps for [madmeg](http://madmeg.org/).
 ## Patriarche 216 (2016) *
 
 
+# Sorts
 
+## Minus Vim I - Debilitatem (2016) *
+<!-- ma1 ; ajouter bouton "print/pdf"-->
 
+## Magis habent virtutem I (2016) *
+<!-- mb1 ; ajouter bouton "print/pdf" -->
+
+## Magis habent virtutem II (2016)
+<!-- scan égaré :( -->
 
