@@ -11,6 +11,8 @@ html, body, #map { width: 100%; height: 100%; margin: 0; padding: 0; background-
 }
 .leaflet-control-home { background-image: url(../tiles-webapp/images/icon-home.png);
 }
+.leaflet-control-print { background-image: url(../tiles-webapp/images/icon-print.png);
+}
 .leaflet-control-shop { background-image: url(../tiles-webapp/images/icon-shop.png);
 }
 

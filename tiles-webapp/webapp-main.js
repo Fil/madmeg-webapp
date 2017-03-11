@@ -762,10 +762,13 @@ function openwindow(cartel, height) {
         if (typeof infos == 'string') {
             buttons += '<a class="leaflet-control-infos" href="#" title="infos" style="opacity: 1;" onclick="return openwindow(\'' + infos + '\', 430);">i</a>';
         }
+        if (typeof print == 'string') {
+            buttons += '<a class="leaflet-control-print" href="' + print + '" title="print" style="opacity: 1;">🖨</a>';
+        }
         if (typeof shop == 'string') {
             buttons += '<a class="leaflet-control-shop" href="' + shop + '" title="shop" style="opacity: 1;">$</a>';
         }
-        
+
         // en dernier, home page
         buttons += '<a class="leaflet-control-home" href="http://madmeg.org/" title="madmeg.org" style="opacity: 1;">H</a>';
         
