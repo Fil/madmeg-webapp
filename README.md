@@ -126,12 +126,14 @@ Web apps for [madmeg](http://madmeg.org/).
 
 # Sorts
 
-## Minus Vim I - Debilitatem (2016) *
-<!-- ma1 ; ajouter bouton "print/pdf"-->
+## Minus Vis I - Debilitatem (2016)
+<!-- [![](ma1/vignette-1200x630.jpg)](http://madmeg.org/ma1/) -->
+
+## Minus Vis II - Aufer Dolor Meus (2017)
+<!-- ma2 - scan égaré :( -->
 
 ## Magis habent virtutem I (2016) *
 <!-- mb1 ; ajouter bouton "print/pdf" -->
 
 ## Magis habent virtutem II (2016)
-<!-- scan égaré :( -->
 
