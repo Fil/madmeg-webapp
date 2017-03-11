@@ -133,7 +133,7 @@ Web apps for [madmeg](http://madmeg.org/).
 <!-- ma2 - scan égaré :( -->
 
 ## Magis habent virtutem I (2016) *
-<!-- mb1 ; ajouter bouton "print/pdf" -->
+<!-- [![](mb1/vignette-1200x630.jpg)](http://madmeg.org/mb1/) -->
 
 ## Magis habent virtutem II (2016)
 
