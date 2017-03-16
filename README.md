@@ -93,7 +93,7 @@ Web apps for [madmeg](http://madmeg.org/).
 
 ## Patriarche n° 2 (2016)
 
-<!-- [![](p2/vignette-1200x630.jpg)](http://madmeg.org/p2/) -->
+[![](p2/vignette-1200x630.jpg)](http://madmeg.org/p2/)
 
 ## Patriarche n° 4 (2013)
 
@@ -113,7 +113,7 @@ Web apps for [madmeg](http://madmeg.org/).
 
 ## Patriarche 17 (2016)
 
-<!-- [![](p17/vignette-1200x630.jpg)](http://madmeg.org/p17/) -->
+[![](p17/vignette-1200x630.jpg)](http://madmeg.org/p17/)
 
 ## Patriarche 31 (2006) *
 
@@ -127,13 +127,13 @@ Web apps for [madmeg](http://madmeg.org/).
 # Sorts
 
 ## Minus Vis I - Debilitatem (2016)
-<!-- [![](ma1/vignette-1200x630.jpg)](http://madmeg.org/ma1/) -->
+[![](ma1/vignette-1200x630.jpg)](http://madmeg.org/ma1/)
 
 ## Minus Vis II - Aufer Dolor Meus (2017)
 <!-- ma2 - scan égaré :( -->
 
 ## Magis habent virtutem I (2016) *
-<!-- [![](mb1/vignette-1200x630.jpg)](http://madmeg.org/mb1/) -->
+[![](mb1/vignette-1200x630.jpg)](http://madmeg.org/mb1/)
 
 ## Magis habent virtutem II (2016)
 
