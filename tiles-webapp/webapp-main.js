@@ -301,7 +301,7 @@ var maxZoom = Math.ceil(Math.log(Math.max(image.w, image.h) / tileSize) / Math.l
 maxZoom -= retina;
 
 retina = false;
-debug = false;
+debug = !!window.location.href.match(/debug=1/);
 flou = false;
 testoffline = false;
 
@@ -386,19 +386,20 @@ if (retina) {
 }
 
 if (debug) {
-    var debugl = L.TileLayer.NoGap.canvas({
-        tileSize: tileSize
-    });
-    debugl.drawTile = function (canvas, tilePoint, zoom) {
-        var ctx = canvas.getContext('2d');
-        ctx.strokeStyle = ctx.fillStyle = "red";
-        ctx.rect(0, 0, tileSize, tileSize);
-        ctx.stroke();
-        ctx.fillText('(' + map.getZoom() + ': ' + tilePoint.x + ', ' + tilePoint.y + ')', 5, 10);
-    };
-
-    map.addLayer(debugl);
-    L.marker(center).addTo(map);
+	var grid = L.gridLayer({
+		attribution: 'debug',
+		zIndex: 1000,
+	});
+	grid.createTile = function (coords) {
+		var tile = document.createElement('div');
+		tile.innerHTML = [coords.x, coords.y, coords.z].join(', ');
+		tile.style.outline = '1px solid red';
+		tile.style.textAlign = 'center';
+		tile.style.lineHeight = '256px'
+		return tile;
+	};
+	grid.addTo(map);
+	L.marker(center).addTo(map);
 }
 
 
