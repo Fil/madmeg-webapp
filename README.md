@@ -115,6 +115,10 @@ Web apps for [madmeg](http://madmeg.org/).
 
 [![](p17/vignette-1200x630.jpg)](http://madmeg.org/p17/)
 
+## Patriarche 24 - Le pêcheur (2017)
+
+<!-- [![](p24/vignette-1200x630.jpg)](http://madmeg.org/p24/) -->
+
 ## Patriarche 31 (2006) *
 
 ## Patriarche 32 (2006) *
