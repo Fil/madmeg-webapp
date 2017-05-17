@@ -123,7 +123,10 @@ Web apps for [madmeg](http://madmeg.org/).
 
 ## Patriarche 32 (2006) *
 
-## Patriarche 178 (2006) *
+## Patriarche 178 - Le Soldat (2017)
+
+<!-- [![](p178/vignette-1200x630.jpg)](http://madmeg.org/p178/) -->
+
 
 ## Patriarche 216 (2016)
 
