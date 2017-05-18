@@ -138,7 +138,7 @@ Web apps for [madmeg](http://madmeg.org/).
 [![](ma1/vignette-1200x630.jpg)](http://madmeg.org/ma1/)
 
 ## Minus Vis II - Aufer Dolor Meus (2017)
-<!-- [![](ma2/vignette-1200x630.jpg)](http://madmeg.org/ma2/) -->
+[![](ma2/vignette-1200x630.jpg)](http://madmeg.org/ma2/)
 
 ## Magis habent virtutem I (2016)
 [![](mb1/vignette-1200x630.jpg)](http://madmeg.org/mb1/)
