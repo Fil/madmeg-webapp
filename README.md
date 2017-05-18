@@ -130,7 +130,7 @@ Web apps for [madmeg](http://madmeg.org/).
 
 ## Patriarche 216 (2016)
 
-<!-- [![](p216/vignette-1200x630.jpg)](http://madmeg.org/p216/) -->
+[![](p216/vignette-1200x630.jpg)](http://madmeg.org/p216/)
 
 # Sorts
 
