@@ -144,5 +144,5 @@ Web apps for [madmeg](http://madmeg.org/).
 [![](mb1/vignette-1200x630.jpg)](http://madmeg.org/mb1/)
 
 ## Magis habent virtutem II (2016)
-<!-- [![](mab/vignette-1200x630.jpg)](http://madmeg.org/mb2/) -->
+[![](mab/vignette-1200x630.jpg)](http://madmeg.org/mb2/)
 
