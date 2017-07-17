@@ -147,14 +147,14 @@ Web apps for [madmeg](http://madmeg.org/).
 [![](mb2/vignette-1200x630.jpg)](http://madmeg.org/mb2/)
 
 ## Magis habent virtutem III (2017)
-<!-- [![](mb3/vignette-1200x630.jpg)](http://madmeg.org/mb3/) -->
+[![](mb3/vignette-1200x630.jpg)](http://madmeg.org/mb3/)
 
 ## Magis habent virtutem IV (2017)
-<!-- [![](mb4/vignette-1200x630.jpg)](http://madmeg.org/mb4/) -->
+[![](mb4/vignette-1200x630.jpg)](http://madmeg.org/mb4/)
 
 ## Magis habent virtutem V (2017)
-<!-- [![](mb5/vignette-1200x630.jpg)](http://madmeg.org/mb5/) -->
+[![](mb5/vignette-1200x630.jpg)](http://madmeg.org/mb5/)
 
 ## Magis habent virtutem VI (2017)
-<!-- [![](mb6/vignette-1200x630.jpg)](http://madmeg.org/mb6/) -->
+[![](mb6/vignette-1200x630.jpg)](http://madmeg.org/mb6/)
 
