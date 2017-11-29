@@ -1,25 +1,22 @@
 Web apps for [madmeg](http://madmeg.org/).
 
-# Athéniennes
+# L’Athénée des Femmes
 
 ## Olympe &amp; Angela (2013-2014)
 
 [![](athena/vignette-1200x630.jpg)](http://madmeg.org/athena/)
 
-
 ## Jac sm Kee (2015)
 
-<!-- [![](jacsmkee/vignette-1200x630.jpg)](http://madmeg.org/jacsmkee/) -->
-
+[![](jacsmkee/vignette-1200x630.jpg)](http://madmeg.org/jacsmkee/)
 
 ## Simone de Beauvoir (2016)
 
-<!-- [![](simone/vignette-1200x630.jpg)](http://madmeg.org/simone/) -->
-
+[![](simone/vignette-1200x630.jpg)](http://madmeg.org/simone/)
 
 ## Christine de Pizan (2014)
 
-<!-- [![](christine/vignette-1200x630.jpg)](http://madmeg.org/christine/) -->
+[![](christine/vignette-1200x630.jpg)](http://madmeg.org/christine/)
 
 
 ## Angela Davis (2014) *
