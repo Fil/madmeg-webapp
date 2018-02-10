@@ -28,7 +28,8 @@ Web apps for [madmeg](http://madmeg.org/).
 ## La Clé de ma Chambre (2015)
 <!-- [![](clef/vignette-1200x630.jpg)](http://madmeg.org/clef/) -->
 
-## Va DATA Chambre (2015) *
+## Va DATA Chambre (2015)
+<!-- [![](data/vignette-1200x630.jpg)](http://madmeg.org/data/) -->
 
 ## Fukushima dans ma Tête (2015) *
 
