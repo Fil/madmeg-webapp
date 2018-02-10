@@ -25,7 +25,8 @@ Web apps for [madmeg](http://madmeg.org/).
 
 # Chambre
 
-## La Clé de ma Chambre (2015) *
+## La Clé de ma Chambre (2015)
+<!-- [![](clef/vignette-1200x630.jpg)](http://madmeg.org/clef/) -->
 
 ## Va DATA Chambre (2015) *
 
@@ -145,7 +146,7 @@ Web apps for [madmeg](http://madmeg.org/).
 ## Minus Vis II - Aufer Dolor Meus (2017)
 [![](ma2/vignette-1200x630.jpg)](http://madmeg.org/ma2/)
 
-## Minus Vis III - Claudere Ora Vesta (2017)
+## Minus Vis III - Claudere Ora Vesta. ET Aperuit Mea (2017)
 <!-- [![](ma3/vignette-1200x630.jpg)](http://madmeg.org/ma3/) -->
 
 ## Magis habent virtutem I (2016)
