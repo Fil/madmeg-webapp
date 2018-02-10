@@ -31,7 +31,8 @@ Web apps for [madmeg](http://madmeg.org/).
 ## Va DATA Chambre (2015)
 <!-- [![](data/vignette-1200x630.jpg)](http://madmeg.org/data/) -->
 
-## Fukushima dans ma Tête (2015) *
+## Fukushima dans ma Tête (2015)
+<!-- [![](fukushima/vignette-1200x630.jpg)](http://madmeg.org/fukushima/) -->
 
 ## La Chambre du Roy (2015)
 <!-- [![](roy/vignette-1200x630.jpg)](http://madmeg.org/roy/) -->
