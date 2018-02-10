@@ -44,7 +44,9 @@ Web apps for [madmeg](http://madmeg.org/).
 
 [![](fezouata/vignette-1200x630.jpg)](http://madmeg.org/fezouata/)
 
-## Le Phoque Mort (2013) *
+## Le Phoque Mort (2014)
+<!-- [![](phoque/vignette-1200x630.jpg)](http://madmeg.org/phoque/) -->
+
 
 
 # Le Tartare
