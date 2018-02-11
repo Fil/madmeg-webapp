@@ -26,16 +26,16 @@ Web apps for [madmeg](http://madmeg.org/).
 # Chambre
 
 ## La Clé de ma Chambre (2015)
-<!-- [![](clef/vignette-1200x630.jpg)](http://madmeg.org/clef/) -->
+[![](clef/vignette-1200x630.jpg)](http://madmeg.org/clef/)
 
 ## Va DATA Chambre (2015)
-<!-- [![](data/vignette-1200x630.jpg)](http://madmeg.org/data/) -->
+[![](data/vignette-1200x630.jpg)](http://madmeg.org/data/)
 
 ## Fukushima dans ma Tête (2015)
-<!-- [![](fukushima/vignette-1200x630.jpg)](http://madmeg.org/fukushima/) -->
+[![](fukushima/vignette-1200x630.jpg)](http://madmeg.org/fukushima/)
 
 ## La Chambre du Roy (2015)
-<!-- [![](roy/vignette-1200x630.jpg)](http://madmeg.org/roy/) -->
+[![](roy/vignette-1200x630.jpg)](http://madmeg.org/roy/)
 
 
 # Charognes
@@ -45,7 +45,7 @@ Web apps for [madmeg](http://madmeg.org/).
 [![](fezouata/vignette-1200x630.jpg)](http://madmeg.org/fezouata/)
 
 ## Le Phoque Mort (2014)
-<!-- [![](phoque/vignette-1200x630.jpg)](http://madmeg.org/phoque/) -->
+[![](phoque/vignette-1200x630.jpg)](http://madmeg.org/phoque/)
 
 
 
@@ -151,7 +151,7 @@ Web apps for [madmeg](http://madmeg.org/).
 [![](ma2/vignette-1200x630.jpg)](http://madmeg.org/ma2/)
 
 ## Minus Vis III - Claudere Ora Vesta. ET Aperuit Mea (2017)
-<!-- [![](ma3/vignette-1200x630.jpg)](http://madmeg.org/ma3/) -->
+[![](ma3/vignette-1200x630.jpg)](http://madmeg.org/ma3/)
 
 ## Magis habent virtutem I (2016)
 [![](mb1/vignette-1200x630.jpg)](http://madmeg.org/mb1/)
