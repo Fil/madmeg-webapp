@@ -348,7 +348,19 @@ map.on('zoomend', function () {
 
 map.addControl(new L.Control.FullScreen());
 
+/*
 
+var southWest = L.latLng(81, -180),
+northEast = L.latLng(85, 180);
+var bounds = L.latLngBounds(southWest, northEast);
+
+ */
+if (typeof bounds == "object") {
+	map.setMaxBounds(bounds);
+	map.on('drag', function() {
+	    map.panInsideBounds(bounds, { animate: false });
+	});
+}
 
 var jardin = new L.TileLayer.NoGap(tileserver, {
     attribution: 'madmeg',

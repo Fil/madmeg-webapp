@@ -96,6 +96,9 @@ Web apps for [madmeg](http://madmeg.org/).
 
 ## Lisboa (2009) *
 
+<!-- [![](lisboa/vignette-1200x630.jpg)](http://madmeg.org/epoux/) -->
+
+
 ## Shanghai (2010) *
 
 
