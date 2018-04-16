@@ -96,10 +96,12 @@ Web apps for [madmeg](http://madmeg.org/).
 
 ## Lisboa (2009) *
 
-<!-- [![](lisboa/vignette-1200x630.jpg)](http://madmeg.org/epoux/) -->
+<!-- [![](lisboa/vignette-1200x630.jpg)](http://madmeg.org/lisboa/) -->
 
 
 ## Shanghai (2010) *
+
+<!-- [![](shanghai/vignette-1200x630.jpg)](http://madmeg.org/shanghai/) -->
 
 
 # Les Patriarches
