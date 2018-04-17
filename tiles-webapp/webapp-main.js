@@ -786,7 +786,7 @@ function openwindow(cartel, height) {
         }
 
         // en dernier, home page
-        buttons += '<a class="leaflet-control-home" href="http://madmeg.org/" title="madmeg.org" style="opacity: 1;">H</a>';
+        buttons += '<a class="leaflet-control-home" href="http://madmeg.org/" target="_parent" title="madmeg.org" style="opacity: 1;">H</a>';
         
        // buttons += '<a class="leaflet-control-home" href="/" title="home" style="opacity: 1;">H</a>';
 
