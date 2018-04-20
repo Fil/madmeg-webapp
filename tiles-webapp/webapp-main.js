@@ -1,4 +1,4 @@
-$('body').append('<div id=map>');
+$('body').append('<div id=map style="background:white">');
 
 // envoyer sur le tileserver madmeg.org si on tourne en localhost
 if (window.location.hostname == 'localhost')
@@ -318,6 +318,9 @@ if (typeof panorama360 !== 'undefined' && panorama360) {
     panorama360 = false;
     config.crs = L.CRS.Simple;
 }
+
+config.sleepNote = false; // ne pas afficher "hover to wake" cf L.Sleep.js
+config.sleepOpacity = .8;
 
 var map = new L.Map('map', config);
 
