@@ -320,7 +320,7 @@ if (typeof panorama360 !== 'undefined' && panorama360) {
 }
 
 config.sleepNote = false; // ne pas afficher "hover to wake" cf L.Sleep.js
-config.sleepOpacity = .8;
+config.sleepOpacity = 1.; // pas de gris sur le noir et blanc de madmeg
 
 var map = new L.Map('map', config);
 
