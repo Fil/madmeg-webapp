@@ -106,13 +106,37 @@ Web apps for [madmeg](http://madmeg.org/).
 
 # Les Patriarches
 
+## Patriarche n° 1 (2017)
+
+<!-- [![](p1/vignette-1200x630.jpg)](http://madmeg.org/p1/) -->
+
 ## Patriarche n° 2 (2016)
 
 [![](p2/vignette-1200x630.jpg)](http://madmeg.org/p2/)
 
+## Patriarche n° 3 (2017)
+
+<!-- [![](p3/vignette-1200x630.jpg)](http://madmeg.org/p3/) -->
+
 ## Patriarche n° 4 (2013)
 
 [![](p4/vignette-1200x630.jpg)](http://madmeg.org/p4/)
+
+## Patriarche n° 5 (2017)
+
+<!-- [![](p5/vignette-1200x630.jpg)](http://madmeg.org/p5/) -->
+
+## Patriarche n° 15 (2018)
+
+<!-- [![](p15/vignette-1200x630.jpg)](http://madmeg.org/p15/) -->
+
+## Patriarche n° 22 (2018)
+
+<!-- [![](p22/vignette-1200x630.jpg)](http://madmeg.org/p22/) -->
+
+## Patriarche n° 37 (2018)
+
+<!-- [![](p37/vignette-1200x630.jpg)](http://madmeg.org/p37/) -->
 
 
 ## Patriarche 40 (2016)
