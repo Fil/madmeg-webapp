@@ -176,3 +176,8 @@ Web apps for [madmeg](http://madmeg.org/).
 ## Magis habent virtutem VI (2017)
 [![](mb6/vignette-1200x630.jpg)](http://madmeg.org/mb6/)
 
+# Tartares
+
+## Le sabbat des Erinyes (2018)
+<!-- [![](weinstein/vignette-1200x630.jpg)](http://madmeg.org/weinstein/) -->
+
