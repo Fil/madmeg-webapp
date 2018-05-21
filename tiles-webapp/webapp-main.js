@@ -787,6 +787,9 @@ function openwindow(cartel, height) {
         if (typeof playlist == 'string') {
             buttons += '<a class="leaflet-control-playlist" href="' + playlist + '" title="playlist" style="opacity: 1;">𝄞</a>';
         }
+        if (typeof fold == 'string') {
+            buttons += '<a class="leaflet-control-fold" href="' + fold + '" title="fold" style="opacity: 1;">🗺</a>';
+        }
 
         // en dernier, home page
         buttons += '<a class="leaflet-control-home" href="http://madmeg.org/" target="_parent" title="madmeg.org" style="opacity: 1;">H</a>';

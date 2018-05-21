@@ -17,6 +17,8 @@ html, body, #map { width: 100%; height: 100%; margin: 0; padding: 0; background-
 }
 .leaflet-control-playlist { background-image: url(../tiles-webapp/images/icon-playlist.png);
 }
+.leaflet-control-fold { background-image: url(../tiles-webapp/images/icon-fold.png);
+}
 
 .leaflet-touch .leaflet-bar a, .leaflet-bar a, .leaflet-bar a:hover {
     background-color: #fff;
