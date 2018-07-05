@@ -96,19 +96,19 @@ Web apps for [madmeg](http://madmeg.org/).
 
 ## Lisboa (2009) *
 
-<!-- [![](lisboa/vignette-1200x630.jpg)](http://madmeg.org/lisboa/) -->
+[![](lisboa/vignette-1200x630.jpg)](http://madmeg.org/lisboa/)
 
 
 ## Shanghai (2010) *
 
-<!-- [![](shanghai/vignette-1200x630.jpg)](http://madmeg.org/shanghai/) -->
+[![](shanghai/vignette-1200x630.jpg)](http://madmeg.org/shanghai/)
 
 
 # Les Patriarches
 
 ## Patriarche n° 1 (2017)
 
-<!-- [![](p1/vignette-1200x630.jpg)](http://madmeg.org/p1/) -->
+[![](p1/vignette-1200x630.jpg)](http://madmeg.org/p1/)
 
 ## Patriarche n° 2 (2016)
 
@@ -116,7 +116,7 @@ Web apps for [madmeg](http://madmeg.org/).
 
 ## Patriarche n° 3 (2017)
 
-<!-- [![](p3/vignette-1200x630.jpg)](http://madmeg.org/p3/) -->
+[![](p3/vignette-1200x630.jpg)](http://madmeg.org/p3/)
 
 ## Patriarche n° 4 (2013)
 
@@ -124,19 +124,19 @@ Web apps for [madmeg](http://madmeg.org/).
 
 ## Patriarche n° 5 (2017)
 
-<!-- [![](p5/vignette-1200x630.jpg)](http://madmeg.org/p5/) -->
+[![](p5/vignette-1200x630.jpg)](http://madmeg.org/p5/)
 
 ## Patriarche n° 15 (2018)
 
-<!-- [![](p15/vignette-1200x630.jpg)](http://madmeg.org/p15/) -->
+[![](p15/vignette-1200x630.jpg)](http://madmeg.org/p15/)
 
 ## Patriarche n° 22 (2018)
 
-<!-- [![](p22/vignette-1200x630.jpg)](http://madmeg.org/p22/) -->
+[![](p22/vignette-1200x630.jpg)](http://madmeg.org/p22/)
 
 ## Patriarche n° 37 (2018)
 
-<!-- [![](p37/vignette-1200x630.jpg)](http://madmeg.org/p37/) -->
+[![](p37/vignette-1200x630.jpg)](http://madmeg.org/p37/)
 
 
 ## Patriarche 40 (2016)
