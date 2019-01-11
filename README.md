@@ -130,6 +130,10 @@ Web apps for [madmeg](http://madmeg.org/).
 
 <!-- [![](p6/vignette-1200x630.jpg)](http://madmeg.org/p6/) -->
 
+## Patriarche n° 7 (2018)
+
+<!-- [![](p7/vignette-1200x630.jpg)](http://madmeg.org/p7/) -->
+
 ## Patriarche n° 15 (2018)
 
 [![](p15/vignette-1200x630.jpg)](http://madmeg.org/p15/)
