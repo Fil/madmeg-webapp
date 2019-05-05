@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Minus Vis IV - Tarot et complementarum | mad meg (2018)</title>
+
+<meta property="og:image" content="http://madmeg.org/ma4/vignette-1200x630.jpg">
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+
+<script>
+
+	var image = { w:7739, h:9710 };
+
+	// langue du visiteur, soit dans l'url ?lang=fr
+	// soit dans la config navigateur
+	var lang = (""+window.location).match(/\?lang=(\w+)/);
+	lang = ( lang ? lang[1] : (navigator.userLanguage || navigator.language) )
+		|| null;
+
+	var opus = (lang == 'fr') ? 'epoux-fr'
+			 : ((lang == 'it') ? 'epoux-it' // italien
+			 :                  'epoux-en' // defaut
+			 ); 
+
+	var opus = 'ma4';
+
+	var tileSize = 256;
+
+	var tileserver = '../tiles/'+ opus +'/'+tileSize+'/{z}/{x}/{y}.jpg';
+
+	var zoomInitial = 5;
+	var center = [0.318,0.228];
+
+	var minZoom = 2;
+
+    var cartel = 'cartel-fr.jpg';
+    
+    // var print = 'madmeg-ma1.pdf';
+
+</script>
+
+<!-- ce bloc si on a des icones speciales dans images/ -->
+<link rel="apple-touch-icon" href="images/apple-touch-icon-72x72.png" />
+<link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png" />
+<link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png" />
+<link rel="apple-touch-icon" sizes="144x144" href="images/apple-touch-icon-144x144.png" />
+<link rel="icon" type="image/png" href="images/apple-touch-icon-72x72.png" />
+
+
+<link rel="stylesheet" href="../tiles-webapp/leaflet.css" />
+<link rel="stylesheet" href="../tiles-webapp/webapp.css" />
+
+</head>
+<body></body>
+
+<script src="../tiles-webapp/leaflet.js" type="text/javascript"></script>
+<script src="../tiles-webapp/Control.FullScreen.js" type="text/javascript"></script>
+<script src="../tiles-webapp/jquery.min.js" type="text/javascript"></script>
+<script src="../tiles-webapp/leaflet-hash.js" type="text/javascript"></script>
+<script src="../tiles-webapp/webapp-main.js"></script>
+</html>
