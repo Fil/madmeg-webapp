@@ -191,13 +191,13 @@ Web apps for [madmeg](http://madmeg.org/).
 [![](ma3/vignette-1200x630.jpg)](http://madmeg.org/ma3/)
 
 ## Minus Vis IV - Tarot et complementarum (2018)
-<!-- [![](ma4/vignette-1200x630.jpg)](http://madmeg.org/ma4/) -->
+[![](ma4/vignette-1200x630.jpg)](http://madmeg.org/ma4/)
 
 ## Minus Vis V - Codex Gonadus (2018)
-<!-- [![](ma5/vignette-1200x630.jpg)](http://madmeg.org/ma5/) -->
+[![](ma5/vignette-1200x630.jpg)](http://madmeg.org/ma5/)
 
 ## Minus Vis VI - Rabenvatersschandzauberkapuze (2018)
-<!-- [![](ma6/vignette-1200x630.jpg)](http://madmeg.org/ma6/) -->
+[![](ma6/vignette-1200x630.jpg)](http://madmeg.org/ma6/)
 
 ## Magis habent virtutem I (2016)
 [![](mb1/vignette-1200x630.jpg)](http://madmeg.org/mb1/)
@@ -218,16 +218,16 @@ Web apps for [madmeg](http://madmeg.org/).
 [![](mb6/vignette-1200x630.jpg)](http://madmeg.org/mb6/)
 
 ## Magis habent virtutem VII - Rabenmutterfestzauberlied (2018)
-<!-- [![](mb7/vignette-1200x630.jpg)](http://madmeg.org/mb7/) -->
+[![](mb7/vignette-1200x630.jpg)](http://madmeg.org/mb7/)
 
 ## Magis habent virtutem VIII - Ut se cogite qui in villam (2018)
-<!-- [![](mb8/vignette-1200x630.jpg)](http://madmeg.org/mb8/) -->
+[![](mb8/vignette-1200x630.jpg)](http://madmeg.org/mb8/)
 
 ## Magis habent virtutem IX - Lumina Elementa Exordii Mulieribus (2018)
-<!-- [![](mb9/vignette-1200x630.jpg)](http://madmeg.org/mb9/) -->
+[![](mb9/vignette-1200x630.jpg)](http://madmeg.org/mb9/)
 
 ## Magis habent virtutem X - Vade Retro Defecatores (2018)
-<!-- [![](mb10/vignette-1200x630.jpg)](http://madmeg.org/mb10/) -->
+[![](mb10/vignette-1200x630.jpg)](http://madmeg.org/mb10/)
 
 # Tartares
 
