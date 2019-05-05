@@ -214,5 +214,5 @@ Web apps for [madmeg](http://madmeg.org/).
 [![](weinstein/vignette-1200x630.jpg)](http://madmeg.org/weinstein/)
 
 ## L'axe du mâle (2018)
-<!-- [![](axe/vignette-1200x630.jpg)](http://madmeg.org/axe/) -->
+[![](axe/vignette-1200x630.jpg)](http://madmeg.org/axe/)
 
