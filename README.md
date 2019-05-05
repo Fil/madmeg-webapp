@@ -211,7 +211,7 @@ Web apps for [madmeg](http://madmeg.org/).
 # Tartares
 
 ## Le sabbat des Erinyes (2018)
-<!-- [![](weinstein/vignette-1200x630.jpg)](http://madmeg.org/weinstein/) -->
+[![](weinstein/vignette-1200x630.jpg)](http://madmeg.org/weinstein/)
 
 ## L'axe du mâle (2018)
 <!-- [![](axe/vignette-1200x630.jpg)](http://madmeg.org/axe/) -->
