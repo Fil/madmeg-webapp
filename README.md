@@ -200,7 +200,7 @@ Web apps for [madmeg](http://madmeg.org/).
 [![](ma6/vignette-1200x630.jpg)](http://madmeg.org/ma6/)
 
 ## Minus Vis VII - Utérus, que tes trompes gonflent d’orgueil (2019)
-<!-- [![](ma7/vignette-1200x630.jpg)](http://madmeg.org/ma7/) -->
+[![](ma7/vignette-1200x630.jpg)](http://madmeg.org/ma7/)
 
 ## Magis habent virtutem I (2016)
 [![](mb1/vignette-1200x630.jpg)](http://madmeg.org/mb1/)
@@ -233,10 +233,10 @@ Web apps for [madmeg](http://madmeg.org/).
 [![](mb10/vignette-1200x630.jpg)](http://madmeg.org/mb10/)
 
 ## Magis habent virtutem XI - Les 10 tremblements pour faire tomber le Mont Sexisme (2019)
-<!-- [![](mb11/vignette-1200x630.jpg)](http://madmeg.org/mb11/) -->
+[![](mb11/vignette-1200x630.jpg)](http://madmeg.org/mb11/)
 
 ## Magis habent virtutem XII - Mortis Rosis (2019)
-<!-- [![](mb12/vignette-1200x630.jpg)](http://madmeg.org/mb12/) -->
+[![](mb12/vignette-1200x630.jpg)](http://madmeg.org/mb12/)
 
 # Tartares
 
