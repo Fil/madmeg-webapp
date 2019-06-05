@@ -49,11 +49,20 @@ Web apps for [madmeg](http://madmeg.org/).
 
 
 
-# Le Tartare
+# Tartares
 
 ## Zuckerberk (2017)
 
 [![](zuckerberk/vignette-1200x630.jpg)](http://madmeg.org/zuckerberk/)
+
+## Le sabbat des Erinyes (2018)
+[![](weinstein/vignette-1200x630.jpg)](http://madmeg.org/weinstein/)
+
+## L'axe du mâle (2018)
+[![](axe/vignette-1200x630.jpg)](http://madmeg.org/axe/)
+
+## Le martyre des gilets jaunes (2019)
+[![](giletsjaunes/vignette-1200x630.jpg)](http://madmeg.org/giletsjaunes/)
 
 
 
@@ -237,12 +246,4 @@ Web apps for [madmeg](http://madmeg.org/).
 
 ## Magis habent virtutem XII - Mortis Rosis (2019)
 [![](mb12/vignette-1200x630.jpg)](http://madmeg.org/mb12/)
-
-# Tartares
-
-## Le sabbat des Erinyes (2018)
-[![](weinstein/vignette-1200x630.jpg)](http://madmeg.org/weinstein/)
-
-## L'axe du mâle (2018)
-[![](axe/vignette-1200x630.jpg)](http://madmeg.org/axe/)
 
