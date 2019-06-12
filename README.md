@@ -49,7 +49,7 @@ Web apps for [madmeg](http://madmeg.org/).
 
 
 
-# Tartares
+# Le Tartare
 
 ## Zuckerberk (2017)
 
