@@ -272,8 +272,9 @@ L.TileLayer.NoGap = L.TileLayer.extend({
 
 // 		console.log('Should dump tile to canvas:', tile);
 // 		console.log('Dumping:', tile.coords, "at", offset );
-
-		level.ctx.drawImage(tile.el, offset.x, offset.y, tileSize.x, tileSize.y);
+		try {
+			level.ctx.drawImage(tile.el, offset.x, offset.y, tileSize.x, tileSize.y);
+		} catch(e) {}
 
 		// Do not remove the tile itself, as it is needed to check if the whole
 		// level (and its canvas) should be removed (via level.el.children.length)
