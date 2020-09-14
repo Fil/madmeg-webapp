@@ -30,7 +30,7 @@ md`# madmeg next`
   value = value && value[1];
   if (!options.includes(value)) value = "delices-en";
   if (!options.includes(value)) value = options[0];
-  return select({ options, description: "opus" });
+  return select({ options, value, description: "opus" });
 }
 );
   main.variable(observer("opus")).define("opus", ["Generators", "viewof opus"], (G, _) => G.input(_));
@@ -700,16 +700,27 @@ md`## Utilities`
 require("d3-selection@2", "d3-transition@2", "d3-zoom@2", "d3-tile@1")
 )});
   main.variable(observer("select")).define("select", ["html"], function(html){return(
-function select({ options, description }) {
-  options = options.map(d => ({ label: d, value: d }));
+function select({ options, value, description }) {
+  if (options[0].value === undefined)
+    options = options.map(d => ({ label: d, value: d }));
+
   const form = html`<form style="display: flex; font: 12px sans-serif; align-items: center; min-height: 33px;"><select style="margin-right: 0.5em;" name="i">${options.map(
     ({ label, value }) =>
-      Object.assign(html`<option>`, { value, textContent: label })
+      Object.assign(html`<option>`, {
+        value,
+        textContent: label
+      })
   )}</select> <em>${description}</em>`;
   form.i.selectedIndex = 1;
+  if (value)
+    for (let i = 0; i < options.length; i++)
+      if (options[i].value == value) form.i.selectedIndex = i;
+
   form.i.onchange = () => form.dispatchEvent(new CustomEvent("input"));
   form.oninput = () => (form.value = options[form.i.selectedIndex].value);
+
   form.oninput();
+
   return form;
 }
 )});

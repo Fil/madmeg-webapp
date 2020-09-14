@@ -1,6 +1,6 @@
 # madmeg next
 
-https://observablehq.com/d/7a46653beb6e7167@2412
+https://observablehq.com/d/7a46653beb6e7167@2456
 
 View this notebook in your browser by running a web server in this folder. For
 example:
