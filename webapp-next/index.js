@@ -3,16 +3,18 @@ export default function define(runtime, observer) {
   main.variable(observer()).define(["md"], function(md){return(
 md`# madmeg next`
 )});
-  main.variable(observer("map")).define("map", ["addDetails","animateCanvas","addControls","d3","style"], function(addDetails,animateCanvas,addControls,d3,style)
+  main.variable(observer("map")).define("map", ["addDetails","addOverlay","animateCanvas","addControls","d3","style"], function(addDetails,addOverlay,animateCanvas,addControls,d3,style)
 {
   const div = document.createElement("div");
   const canvas = document.createElement("canvas");
   const details = addDetails(div, canvas);
+  const overlay = addOverlay(div, canvas);
 
   div.appendChild(canvas);
   div.resize = animateCanvas(div);
   details.hide();
-  addControls(div, canvas, details);
+  overlay.hide();
+  addControls(div, canvas, details, overlay);
 
   d3.select(div).append(() => style);
   d3.select("body").classed(
@@ -50,13 +52,23 @@ checkbox({
 );
   main.variable(observer("settings")).define("settings", function(){return(
 {
-  jacsmkee: {
-    w: 26107,
-    h: 16518,
+  "alphabet-256": {
+    w: 19859,
+    h: 27369,
     s: 256,
     minZ: 2,
-    start: [6, 0.377, 0.535],
-    cartel: "https://madmeg.org/jacsmkee/cartel-fr.jpg"
+    addZ: 0.2,
+    cartel: "https://madmeg.org/delizie/cartel-fr.jpg",
+    start: [2, .82, .56]
+  },
+  "alphabet-512": {
+    w: 19859,
+    h: 27369,
+    s: 512,
+    minZ: 2,
+    addZ: 0.2,
+    cartel: "https://madmeg.org/delizie/cartel-fr.jpg",
+    start: [2, .82, .56]
   },
   "delices-en": {
     w: 33328,
@@ -85,23 +97,32 @@ checkbox({
     cartel: "https://madmeg.org/delizie/cartel-fr.jpg",
     start: [2, .4, .5]
   },
-  "alphabet-256": {
-    w: 19859,
-    h: 27369,
+  "feast-fr": {
+    w: 98304,
+    h: 32768,
     s: 256,
     minZ: 2,
     addZ: 0.2,
-    cartel: "https://madmeg.org/delizie/cartel-fr.jpg",
-    start: [2, .82, .56]
+    cartel: "https://madmeg.org/feastoffools/cartel-fr.jpg",
+    video: `https://www.youtube-nocookie.com/embed/lJCAhIG4hEw?autoplay=1`,
+    start: [5, 0.129, 0.365]
   },
-  "alphabet-512": {
-    w: 19859,
-    h: 27369,
-    s: 512,
+  jacsmkee: {
+    w: 26107,
+    h: 16518,
+    s: 256,
     minZ: 2,
-    addZ: 0.2,
-    cartel: "https://madmeg.org/delizie/cartel-fr.jpg",
-    start: [2, .82, .56]
+    start: [6, 0.377, 0.535],
+    cartel: "https://madmeg.org/jacsmkee/cartel-fr.jpg"
+  },
+  lippido: {
+    w: 6500,
+    h: 6500,
+    s: 256,
+    minZ: 2,
+    start: [4, 0.35, 0.41],
+    cartel: "https://madmeg.org/lippido/cartel-fr.jpg",
+    shop: "https://www.madmeg.org/base/shop/Lippido.html"
   }
 }
 )});
@@ -245,15 +266,22 @@ button.zoom-in {
 button.zoom-out {
   background-image: url(https://madmeg.org/tiles-webapp/images/icon-zoom-out.png);
 }
-button.fullscreen {
-  background-image: url(https://madmeg.org/tiles-webapp/images/icon-fullscreen.png);
-}
 button.cartel {
   background-image: url(https://madmeg.org/tiles-webapp/images/icon-cartel.png);
+}
+button.fullscreen {
+  background-image: url(https://madmeg.org/tiles-webapp/images/icon-fullscreen.png);
 }
 button.home {
   background-image: url(https://madmeg.org/tiles-webapp/images/icon-home.png);
   height: 60px;
+}
+button.shop {
+  background-image: url(https://madmeg.org/tiles-webapp/images/icon-shop.png);
+}
+button.video {
+  background-image: url(https://madmeg.org/tiles-webapp/images/icon-video.png);
+  background-size: cover
 }
 button:focus { outline: none; }
 
@@ -275,6 +303,26 @@ button:focus { outline: none; }
   border-radius: 3px;
   box-shadow: 2px 2px 10px 0px rgba(0,0,0,0.75);
 }
+
+.overlay {
+  overflow: visible; position: absolute; bottom: 0; left:0; z-index: 1;
+  touch-action: none;
+  transform-origin: bottom left;
+  transform: translate(65px, 0) scale(0);
+  transition: transform 0.5s;
+  padding-top: 30px;
+  background: transparent;
+  pointer-events: all;
+}
+
+.overlay.small {
+  transform: translate(0px, 0) scale(0.35);
+  padding-top: 60px;
+}
+
+.video-button {
+  float:right; font-size: 25px; font-weight: bold; margin-left: 13px; height: 28px; cursor: pointer;
+}
 `
 )});
   main.variable(observer("addDetails")).define("addDetails", ["d3","dimensions"], function(d3,dimensions){return(
@@ -292,19 +340,18 @@ function addDetails(node, canvas) {
   });
 
   if (dimensions.cartel) {
-    const im = details
-      .append("div")
-      .attr("class", "cartel")
-      .append("img")
-      .attr("src", dimensions.cartel);
-
     details.node().show = function() {
       details
-        .style("width", `${node.clientWidth}px`)
+        .style("width", `${node.clientWidth + 16}px`)
         .style("height", `${node.clientHeight}px`)
-        .style("display", "flex");
+        .style("display", "flex")
+        .html("");
+      const im = details
+        .append("div")
+        .attr("class", "cartel")
+        .append("img")
+        .attr("src", dimensions.cartel);
       im.style("max-width", `${Math.min(600, node.clientWidth) - 20}px`);
-      im.text("max-width" + `${Math.min(600, node.clientWidth) - 20}px`);
     };
   }
 
@@ -313,7 +360,59 @@ function addDetails(node, canvas) {
   return details.node();
 
   function hide() {
-    details.style("display", "none");
+    details.style("display", "none").html("");
+  }
+}
+)});
+  main.variable(observer("addOverlay")).define("addOverlay", ["d3"], function(d3){return(
+function addOverlay(node, canvas) {
+  const details = d3
+    .select(node)
+    .insert("div", "canvas")
+    .attr("class", "overlay");
+
+  d3.select(document.documentElement).on("keydown.esc", e => {
+    if ((e.keyCode || e.which) === 27) hide();
+  });
+
+  details.node().show = function(embed) {
+
+    if (details.select("div").size()) return hide();
+
+    function small() {
+      details.classed("small", true).classed("large", false);
+    }
+    function large() {
+      details.classed("small", false).classed("large", true);
+    }
+    function toggle() {
+      details.classed("small") ? large() : small();
+    }
+
+    const im = details.append("div").html(embed);
+
+    im.style("max-width", `${Math.min(600, node.clientWidth) - 20}px`);
+    large();
+
+    details.on("click", toggle);
+    im.insert("div", "*").html("<div class='video-button'>&downdownarrows;"); // https://www.compart.com/en/unicode/U+21CA
+    im.insert("div", "*")
+      .html("<div class='video-button'>&times;")
+      .on("click", hide);
+  };
+
+  details.node().hide = hide;
+
+  return details.node();
+
+  function hide() {
+    details
+      .classed("small", false)
+      .classed("large", false)
+      .transition()
+      .duration(1000)
+      .end()
+      .then(() => details.html(""));
   }
 }
 )});
@@ -467,7 +566,6 @@ function animateCanvas(div) {
         refresh();
       };
     }
-    console.log(toload, [...cache].filter(d => !d[1]).map(d => d[0]));
 
     if (!pruned) {
       pruned = setTimeout(() => (pruned = false), 1000);
@@ -542,6 +640,7 @@ function animateCanvas(div) {
       .style("width", `${width}px`)
       .style("height", `${height}px`);
 
+    drawn = false;
     setTimeout(refresh, 300);
   }
 
@@ -582,7 +681,7 @@ function acceptable([x, y, z]) {
 }
 )});
   main.variable(observer("addControls")).define("addControls", ["d3","dimensions"], function(d3,dimensions){return(
-function addControls(node, canvas, details) {
+function addControls(node, canvas, details, overlay) {
   const controls = d3
     .select(node)
     .insert("div", "canvas")
@@ -619,6 +718,36 @@ function addControls(node, canvas, details) {
       .text("?")
       .classed("cartel", true)
       .on("click", () => details.show());
+
+  if (dimensions.video)
+    bar2
+      .append("button")
+      .text("video")
+      .classed("video", true)
+      .on("click", () => {
+        const width = node.clientWidth,
+          height = node.clientHeight;
+        const W = Math.min(600, width) - 20;
+        const H = (W * 0.7) | 0;
+        d3.select(overlay).style("height", `${H}px`);
+        const embed = `<iframe src="${
+          dimensions.video
+        }" width="${W}" height="${H}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+       <style>.overlay.large { transform: translate(
+         ${(width - W) / 2}px,
+         ${-(height - H) / 2}px)
+         scale(1); }
+        </style>`;
+        overlay.show(embed);
+      });
+
+  if (dimensions.shop)
+    bar2
+      .append("a")
+      .attr("href", dimensions.shop)
+      .append("button")
+      .text("shop")
+      .classed("shop", true);
 
   bar2
     .append("a")
