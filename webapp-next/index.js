@@ -123,6 +123,15 @@ checkbox({
     start: [4, 0.35, 0.41],
     cartel: "https://madmeg.org/lippido/cartel-fr.jpg",
     shop: "https://www.madmeg.org/base/shop/Lippido.html"
+  },
+  p37: {
+    title: "Patriarche n° 37",
+    w: 10933,
+    h: 25700,
+    s: 256,
+    minZ: 1,
+    start: [3, 0.24, 0.11],
+    cartel: "https://madmeg.org/p37/cartel-fr.jpg"
   }
 }
 )});
