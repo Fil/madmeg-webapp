@@ -168,7 +168,7 @@ md`The zoom factor depends on retina detection, and dimensions.addZ which allows
 )});
   main.variable(observer("maxNativeZoom")).define("maxNativeZoom", ["dimensions"], function(dimensions){return(
 32 -
-  Math.clz32(Math.max(dimensions.w, dimensions.h) / dimensions.s)
+  Math.clz32((Math.max(dimensions.w, dimensions.h) - 1) / dimensions.s)
 )});
   main.variable(observer("minZ")).define("minZ", ["dimensions"], function(dimensions){return(
 dimensions.minZ
