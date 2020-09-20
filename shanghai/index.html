@@ -1,63 +1,52 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Shanghai | mad meg (2010)</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Shanghai | mad meg (2010)</title>
+  <meta property="og:image" content="https://madmeg.org/shanghai/vignette-1200x630.jpg">
 
-<meta property="og:image" content="http://madmeg.org/shanghai/vignette-1200x630.jpg">
+  <link rel="apple-touch-icon" href="images/apple-touch-icon-72x72.png" />
+  <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png" />
+  <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png" />
+  <link rel="apple-touch-icon" sizes="144x144" href="images/apple-touch-icon-144x144.png" />
+  <link rel="icon" type="image/png" href="images/apple-touch-icon-72x72.png" />
 
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  <script src="../webapp-next/d3.js"></script>
+  <script src="../webapp-next/d3-tile.min.js"></script>
+</head>
+
+<div id="observablehq-2f159cd7">
+  <div class="observablehq-wrapper"></div>
+</div>
 
 <script>
-
-	var image = { w:16384, h:4406 };
-
-	// langue du visiteur, soit dans l'url ?lang=fr
-	// soit dans la config navigateur
-	var lang = (""+window.location).match(/\?lang=(\w+)/);
-	lang = ( lang ? lang[1] : (navigator.userLanguage || navigator.language) )
-		|| null;
-
-	var opus = 'shanghai'; 
-
-	var tileSize = 256;
-
-	var tileserver = '../tiles/'+ opus +'/'+tileSize+'/{z}/{x}/{y}.jpg';
-
-	var zoomInitial = 5;
-	var center = [83.500,65.325];
-
-	var minZoom = 3;
-	
-	var panorama360 = true;
-
-	var cartel = 'cartel-fr.jpg';
-
-	var bounds = [[55, -1800000],[85, 1800000]];
-
+  let opus = "shanghai";
 </script>
 
-<!-- ce bloc si on a des icones speciales dans images/ -->
-<!--
-<link rel="apple-touch-icon" href="images/apple-touch-icon-72x72.png" />
-<link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png" />
-<link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png" />
-<link rel="apple-touch-icon" sizes="144x144" href="images/apple-touch-icon-144x144.png" />
-<link rel="icon" type="image/png" href="images/apple-touch-icon-72x72.png" />
--->
+<script type="module">
+  import {Runtime, Inspector} from "../webapp-next/runtime.js";
+  import define from "../webapp-next/index.js";
+  const run = new Runtime().module(define, name => {
+    if (name === "map" || name === "resizer") return Inspector.into("#observablehq-2f159cd7 .observablehq-wrapper")();
+  });
+  if (document.location.search.match(/debug/)) run.redefine("dodebug", true);
+  if (d3.select && d3.tile) run.redefine("d3", d3);
+
+  run.redefine("opus", opus);
+
+/*
+  run.redefine("dimensions", {
+    w: 19859,
+    h: 27369,
+    s: 512,
+    minZ: 6,
+    addZ: 4,
+    cartel: "./cartel-fr.jpg",
+    start: [2, .82, .56]
+  });
+*/
+</script>
 
 
-<link rel="stylesheet" href="../tiles-webapp/leaflet.css" />
-<link rel="stylesheet" href="../tiles-webapp/webapp.css" />
-
-</head>
-<body></body>
-
-<script src="../tiles-webapp/leaflet.js" type="text/javascript"></script>
-<script src="../tiles-webapp/Control.FullScreen.js" type="text/javascript"></script>
-<script src="../tiles-webapp/Leaflet.Sleep.js" type="text/javascript"></script>
-<script src="../tiles-webapp/jquery.min.js" type="text/javascript"></script>
-<script src="../tiles-webapp/leaflet-hash.js" type="text/javascript"></script>
-<script src="../tiles-webapp/webapp-main.js"></script>
-</html>

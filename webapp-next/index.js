@@ -132,6 +132,17 @@ checkbox({
     minZ: 1,
     start: [3, 0.24, 0.11],
     cartel: "https://madmeg.org/p37/cartel-fr.jpg"
+  },
+  shanghai: {
+    title: "Shanghai",
+    w: 16384,
+    h: 4406,
+    s: 256,
+    wrap: true,
+    translateExtent: [[-180000, -.55], [180000, -.2]],
+    minZ: 3,
+    start: [5, 0.044, 0.674],
+    cartel: "https://madmeg.org/shanghai/cartel-fr.jpg"
   }
 }
 )});
@@ -211,7 +222,9 @@ function hash(t, width, height) {
 }
 )});
   main.variable(observer("getIniTransform")).define("getIniTransform", ["dimensions"], function(dimensions){return(
-function getIniTransform(hash, ini, width, height) {
+function getIniTransform(hash, ini = [2, 0.5, 0.5], width, height) {
+  dimensions;
+
   const gg = String(hash)
     .replace(/^#/, "")
     .split("/")
@@ -434,7 +447,7 @@ d3
   .tileSize(tileSize)
   .clampX(false)
 )});
-  main.variable(observer("animateCanvas")).define("animateCanvas", ["d3","tiler","deltas","acceptable","url","cache","dodebug","tileSize","minZ","maxZzoom","history","hash","getIniTransform","dimensions"], function(d3,tiler,deltas,acceptable,url,cache,dodebug,tileSize,minZ,maxZzoom,history,hash,getIniTransform,dimensions){return(
+  main.variable(observer("animateCanvas")).define("animateCanvas", ["d3","tiler","dimensions","deltas","acceptable","url","cache","dodebug","tileSize","minZ","maxZzoom","history","hash","getIniTransform"], function(d3,tiler,dimensions,deltas,acceptable,url,cache,dodebug,tileSize,minZ,maxZzoom,history,hash,getIniTransform){return(
 function animateCanvas(div) {
   const canvas = d3
     .select(div)
@@ -463,6 +476,9 @@ function animateCanvas(div) {
 
     tiler.extent([[0, 0], [width, height]]);
 
+    if (dimensions.translateExtent)
+      zoom.translateExtent(dimensions.translateExtent);
+
     context.globalAlpha = 1;
 
     toload.length = 0;
@@ -470,15 +486,17 @@ function animateCanvas(div) {
     for (const delta of deltas) {
       // tile coordinates
       tiler.zoomDelta(delta);
-      const tiles = tiler(tr);
+      let tiles = tiler(tr);
+
       let im;
       if (delta === 0) context.globalAlpha = 1;
 
-      for (const [x, y, z] of tiles) {
+      for (const u of tiles) {
+        const [x, y, z] = dimensions.wrap ? d3.tileWrap(u) : u;
         if (!acceptable([x, y, z])) continue;
 
-        const x1 = (x + tiles.translate[0]) * tiles.scale,
-          y1 = (y + tiles.translate[1]) * tiles.scale;
+        const x1 = (u[0] + tiles.translate[0]) * tiles.scale,
+          y1 = (u[1] + tiles.translate[1]) * tiles.scale;
 
         const code = url(x, y, z);
 
@@ -535,7 +553,7 @@ function animateCanvas(div) {
       }
       // translateExtent
       {
-        context.strokeStyle = "blue";
+        context.strokeStyle = "yellow";
         const A = zoom.translateExtent();
         context.strokeRect(
           A[0][0],
@@ -640,7 +658,7 @@ function animateCanvas(div) {
     width = viewport.width;
     height = viewport.height;
 
-    zoom.extent([[-width / 2, -height / 2], [width * 1.5, height * 1.5]]); // viewport coordinates
+    zoom.extent([[0, 0], [width, height]]); // viewport coordinates
 
     canvas.width = dpi * width;
     canvas.height = dpi * height;
