@@ -591,8 +591,11 @@ function animateCanvas(div) {
     .on("zoom", ({ transform }) => {
       tr = transform;
       refresh();
-      if (width && height)
-        history.replaceState(null, '', hash(tr, width, height));
+      if (width && height) {
+        try {
+          history.replaceState(null, '', hash(tr, width, height));
+        } catch (e) {}
+      }
     });
 
   canvas.zoomIn = () =>
