@@ -430,8 +430,11 @@ function addDetails(node, canvas) {
     .attr("class", "bg")
     .on("click", hide);
 
-  d3.select(document.documentElement).on("keydown.esc", e => {
-    if ((e.keyCode || e.which) === 27) hide();
+  d3.select(document.documentElement).on("keydown.escDetails", e => {
+    if ((e.keyCode || e.which) === 27) {
+      console.log("esc");
+      hide();
+    }
   });
 
   if (dimensions.cartel) {
@@ -466,7 +469,7 @@ function addOverlay(node, canvas) {
     .insert("div", "canvas")
     .attr("class", "overlay");
 
-  d3.select(document.documentElement).on("keydown.esc", e => {
+  d3.select(document.documentElement).on("keydown.escOverlay", e => {
     if ((e.keyCode || e.which) === 27) hide();
   });
 
