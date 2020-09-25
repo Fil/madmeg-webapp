@@ -60,7 +60,7 @@ checkbox({
     addZ: 0.2,
     cartel: "https://madmeg.org/alphabet/cartel-fr.jpg",
     video: `https://www.youtube-nocookie.com/embed/-5I1jUCxRfk?autoplay=1`,
-    start: [5.86, 1.038, 0.314]
+    start: [5.86, 0.518, 0.156]
   },
   bitcoin: {
     w: 13103,
@@ -289,7 +289,7 @@ md`The following part is a bit complex as it emulates the old coordinates system
 function hash(t, width, height) {
   const K = t.k / dimensions.s;
   const z = Math.log2(K);
-  const r = 512 / dimensions.s;
+  const r = dimensions.referentiel || 2;
   const g = [(width / 2 - t.x) / t.k, (height / 2 - t.y) / t.k];
   // transform to LatLng from https://leafletjs.com/reference-1.7.1.html#map-setview
   const lat = (1 + 2 * g[1]) / r,
