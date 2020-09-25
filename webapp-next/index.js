@@ -78,6 +78,7 @@ checkbox({
     minZ: 2,
     addZ: 0.2,
     cartel: "https://madmeg.org/delizie/cartel-fr.jpg",
+    referentiel: 1, // historical coordinates
     start: [2, .4, .5]
   },
   "delices-fr": {
@@ -87,6 +88,7 @@ checkbox({
     minZ: 2,
     addZ: 0.2,
     cartel: "https://madmeg.org/delizie/cartel-fr.jpg",
+    referentiel: 1,
     start: [2, .4, .5]
   },
   "delices-it": {
@@ -96,6 +98,7 @@ checkbox({
     minZ: 2,
     addZ: 0.2,
     cartel: "https://madmeg.org/delizie/cartel-fr.jpg",
+    referentiel: 1,
     start: [2, .4, .5]
   },
   "feast-fr": {
@@ -304,7 +307,7 @@ function getIniTransform(hash, ini = [2, 0.5, 0.5], width, height) {
     .map(d => parseFloat(d));
 
   for (const i of [0, 1, 2]) if (gg[i] !== +gg[i]) gg[i] = ini[i];
-  const r = 512 / dimensions.s;
+  const r = dimensions.referentiel || 2; // referentiel = 1 for delizie for historical reasons.
   const k = dimensions.s * Math.pow(2, gg[0]);
   const y = height / 2 - (k * (gg[1] * r - 1)) / 2;
   const x = width / 2 - (k * (gg[2] * r - 1)) / 2;
