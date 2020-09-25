@@ -52,15 +52,6 @@ checkbox({
 );
   main.variable(observer("settings")).define("settings", function(){return(
 {
-  "alphabet-256": {
-    w: 19859,
-    h: 27369,
-    s: 256,
-    minZ: 2,
-    addZ: 0.2,
-    cartel: "https://madmeg.org/alphabet/cartel-fr.jpg",
-    start: [2, .82, .56]
-  },
   alphabet: {
     w: 19859,
     h: 27369,
@@ -548,9 +539,9 @@ function animateCanvas(div) {
 
   let tr;
   let pruned;
+  const historyState = {};
 
   let drawn;
-
   const toload = [];
 
   function draw() {
@@ -696,7 +687,7 @@ function animateCanvas(div) {
       refresh();
       if (width && height) {
         try {
-          history.replaceState(null, '', hash(tr, width, height));
+          history.replaceState(historyState, '', hash(tr, width, height));
         } catch (e) {}
       }
     });
@@ -738,6 +729,9 @@ function animateCanvas(div) {
       );
       tr = d3.zoomIdentity.translate(tt.x, tt.y).scale(tt.k);
       d3.select(canvas).call(zoom.transform, tr);
+      try {
+        history.setState(historyState, '', hash(tr, width, height));
+      } catch (e) {}
     }
 
     width = viewport.width;
