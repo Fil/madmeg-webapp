@@ -65,19 +65,20 @@ checkbox({
     w: 19859,
     h: 27369,
     s: 512,
-    minZ: 2,
+    minZ: 1,
     addZ: 0.2,
     cartel: "https://madmeg.org/alphabet/cartel-fr.jpg",
-    start: [2, .82, .56]
+    video: `https://www.youtube-nocookie.com/embed/-5I1jUCxRfk?autoplay=1`,
+    start: [5.066, 1.041, 0.319]
   },
   bitcoin: {
     w: 13103,
     h: 16272,
-    s: 256,
+    s: 512,
     minZ: 2,
     addZ: 0.2,
     cartel: "https://madmeg.org/bitcoin/cartel-fr.jpg",
-    start: [2, .82, .56]
+    start: [4.17, 0.599, 0.395]
   },
   "delices-en": {
     w: 33328,
@@ -124,6 +125,15 @@ checkbox({
     start: [6, 0.377, 0.535],
     cartel: "https://madmeg.org/jacsmkee/cartel-fr.jpg"
   },
+  jiando: {
+    w: 26107,
+    h: 16518,
+    s: 256,
+    minZ: 2,
+    start: [6, 0.377, 0.535],
+    cartel: "https://madmeg.org/jiando/cartel-fr.jpg",
+    video: `https://www.youtube-nocookie.com/embed/4qOfTMN28Qo?autoplay=1`
+  },
   lippido: {
     w: 6500,
     h: 6500,
@@ -136,20 +146,19 @@ checkbox({
   megeres: {
     w: 30000,
     h: 10457,
-    s: 256,
-    minZ: 2,
+    s: 512,
+    minZ: 2.488,
     addZ: 0.2,
     cartel: "https://madmeg.org/megeres/cartel-fr.jpg",
-    video: `https://www.youtube-nocookie.com/embed/lJCAhIG4hEw?autoplay=1`, // todo
-    start: [2, .82, .56]
+    start: [2.488, 0.2, 0.463]
   },
   p8: {
     title: "Patriarche n°8",
     w: 9148,
     h: 12324,
-    s: 256,
-    minZ: 1,
-    start: [3, 0.24, 0.11],
+    s: 512,
+    minZ: 0,
+    start: [6, 0.692, 0.173],
     cartel: "https://madmeg.org/p8/cartel-fr.jpg"
   },
   p37: {
@@ -165,7 +174,7 @@ checkbox({
     title: "Patriarche n°81",
     w: 10142,
     h: 22259,
-    s: 256,
+    s: 512,
     minZ: 1,
     start: [3, 0.24, 0.11],
     cartel: "https://madmeg.org/p81/cartel-fr.jpg"
@@ -174,36 +183,36 @@ checkbox({
     title: "Patriarche n°136",
     w: 10425,
     h: 12979,
-    s: 256,
-    minZ: 1,
-    start: [3, 0.24, 0.11],
+    s: 512,
+    minZ: 0,
+    start: [5.92, 0.259, 0.347],
     cartel: "https://madmeg.org/p136/cartel-fr.jpg"
   },
   p137: {
     title: "Patriarche n°137",
     w: 9791,
     h: 17644,
-    s: 256,
-    minZ: 1,
-    start: [3, 0.24, 0.11],
+    s: 512,
+    minZ: 0,
+    start: [6.4, 0.28, 0.1],
     cartel: "https://madmeg.org/p137/cartel-fr.jpg"
   },
   p138: {
     title: "Patriarche n°138",
     w: 17236,
     h: 21818,
-    s: 256,
-    minZ: 1,
-    start: [3, 0.24, 0.11],
+    s: 512,
+    minZ: 0,
+    start: [5.68, 0.275, 0.294],
     cartel: "https://madmeg.org/p138/cartel-fr.jpg"
   },
   scopte: {
     title: "Scopte",
     w: 18344,
     h: 11000,
-    s: 256,
-    minZ: 1,
-    start: [3, 0.24, 0.11],
+    s: 512,
+    minZ: 2.5,
+    start: [5.728, 0.052, 0.283],
     cartel: "https://madmeg.org/scopte/cartel-fr.jpg"
   },
   shanghai: {
