@@ -25,7 +25,7 @@
   // langue du visiteur, soit dans l'url ?lang=fr soit dans la config navigateur
   let lang = document.location.search.match(/lang=(\w+)/);
   lang = ( lang ? lang[1] : (navigator.userLanguage || navigator.language) ) || null;
-  let opus = lang == 'fr' ? 'delices-fr'
+  var opus = lang == 'fr' ? 'delices-fr'
            : lang == 'it' ? 'delices-it'
            :                'delices-en' // defaut
 </script>
