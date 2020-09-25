@@ -539,9 +539,9 @@ function animateCanvas(div) {
 
   let tr;
   let pruned;
-  const historyState = {};
 
   let drawn;
+
   const toload = [];
 
   function draw() {
@@ -687,7 +687,7 @@ function animateCanvas(div) {
       refresh();
       if (width && height) {
         try {
-          history.replaceState(historyState, '', hash(tr, width, height));
+          history.replaceState(null, '', hash(tr, width, height));
         } catch (e) {}
       }
     });
@@ -729,9 +729,6 @@ function animateCanvas(div) {
       );
       tr = d3.zoomIdentity.translate(tt.x, tt.y).scale(tt.k);
       d3.select(canvas).call(zoom.transform, tr);
-      try {
-        history.setState(historyState, '', hash(tr, width, height));
-      } catch (e) {}
     }
 
     width = viewport.width;
