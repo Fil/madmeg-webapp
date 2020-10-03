@@ -111,6 +111,16 @@ checkbox({
     video: `https://www.youtube-nocookie.com/embed/lJCAhIG4hEw?autoplay=1`,
     start: [5, 0.129, 0.365]
   },
+  "feast-en": {
+    w: 98304,
+    h: 32768,
+    s: 256,
+    minZ: 2,
+    addZ: 0.2,
+    cartel: "https://madmeg.org/feastoffools/cartel-en.jpg",
+    video: `https://www.youtube-nocookie.com/embed/lJCAhIG4hEw?autoplay=1`,
+    start: [5, 0.129, 0.365]
+  },
   jacsmkee: {
     w: 26107,
     h: 16518,
