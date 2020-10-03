@@ -44,6 +44,9 @@ checkbox({
 })
 )});
   main.variable(observer("dodebug")).define("dodebug", ["Generators", "viewof dodebug"], (G, _) => G.input(_));
+  main.variable(observer()).define(["md","opus"], function(md,opus){return(
+md`[👉 test fullscreen](https://visionscarto.net/obs/?https://observablehq.com/d/7a46653beb6e7167&opus=${opus}&debug=true)`
+)});
   main.variable(observer("resizer")).define("resizer", ["map","viewport","html"], function(map,viewport,html)
 {
   map.resize(viewport);
