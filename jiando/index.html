@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Jiando | mad meg (2020)</title>
+  <meta property="og:image" content="https://madmeg.org/jiando/vignette-1200x630.jpg">
+
+  <link rel="apple-touch-icon" href="images/apple-touch-icon-72x72.png" />
+  <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png" />
+  <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png" />
+  <link rel="apple-touch-icon" sizes="144x144" href="images/apple-touch-icon-144x144.png" />
+  <link rel="icon" type="image/png" href="images/apple-touch-icon-72x72.png" />
+
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  <script src="../webapp-next/d3.js"></script>
+  <script src="../webapp-next/d3-tile.min.js"></script>
+</head>
+
+<div id="observablehq-2f159cd7">
+  <div class="observablehq-wrapper"></div>
+</div>
+
+<script>
+  // var opus = 'jiando-normal';
+  // jiando a un notebook specifique qui gère le pavage infini
+</script>
+
+<div id="observablehq-f8989d94">
+  <div class="observablehq-map"></div>
+  <div class="observablehq-resizer"></div>
+</div>
+<script type="module">
+  import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+  import define from "https://api.observablehq.com/d/e62efe1bef07bd8f.js?v=3";
+  (new Runtime).module(define, name => {
+    if (name === "map") return Inspector.into("#observablehq-f8989d94 .observablehq-map")();
+    if (name === "resizer") return Inspector.into("#observablehq-f8989d94 .observablehq-resizer")();
+  });
+</script>
