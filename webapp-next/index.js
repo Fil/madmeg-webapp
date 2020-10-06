@@ -1115,7 +1115,7 @@ ${
   {
     opus: "scopte",
     title: "Scopte",
-    date: "",
+    date: "2020",
     w: 18344,
     h: 11000,
     s: 512,
@@ -1127,12 +1127,12 @@ ${
   {
     opus: "shanghai",
     title: "Shanghai",
-    date: "",
+    date: "2010",
     w: 16384,
     h: 4406,
     s: 256,
     wrap: true,
-    translateExtent: "[[-180000, -.55], [180000, -.2]]",
+    translateExtent: "[[-180000, -0.52], [180000, -0.1]]",
     minZ: 3,
     start: "5/0.044/0.674",
     cartel: "https://madmeg.org/shanghai/cartel-fr.jpg",
