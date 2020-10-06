@@ -451,7 +451,7 @@ html`<textarea style="width:100%;height:10em"><!DOCTYPE html>
     cartel: "https://madmeg.org/ma1/cartel-fr.jpg",
     url: "https://madmeg.org/ma1/",
     start: "4/0.3/0.35",
-    print: "http://madmeg.org/ma1/madmeg-ma1.pdf"
+    print: "https://madmeg.org/ma1/madmeg-ma1.pdf"
   },
   {
     opus: "ma2",
@@ -465,7 +465,7 @@ html`<textarea style="width:100%;height:10em"><!DOCTYPE html>
     cartel: "https://madmeg.org/ma2/cartel-fr.jpg",
     url: "https://madmeg.org/ma2/",
     start: "5/0.176/0.281",
-    print: "http://madmeg.org/ma2/madmeg-ma2.pdf"
+    print: "https://madmeg.org/ma2/madmeg-ma2.pdf"
   },
   {
     opus: "ma3",
@@ -479,7 +479,7 @@ html`<textarea style="width:100%;height:10em"><!DOCTYPE html>
     cartel: "https://madmeg.org/ma3/cartel-fr.jpg",
     url: "https://madmeg.org/ma3/",
     start: "5/0.179/0.318",
-    print: "http://madmeg.org/ma3/madmeg-ma3.pdf"
+    print: "https://madmeg.org/ma3/madmeg-ma3.pdf"
   },
   {
     opus: "ma4",
@@ -493,7 +493,7 @@ html`<textarea style="width:100%;height:10em"><!DOCTYPE html>
     cartel: "https://madmeg.org/ma4/cartel-fr.jpg",
     url: "https://madmeg.org/ma4/",
     start: "5/0.318/0.228",
-    print: "http://madmeg.org/ma4/madmeg-ma4.pdf"
+    print: "https://madmeg.org/ma4/madmeg-ma4.pdf"
   },
   {
     opus: "ma5",
@@ -507,7 +507,7 @@ html`<textarea style="width:100%;height:10em"><!DOCTYPE html>
     cartel: "https://madmeg.org/ma5/cartel-fr.jpg",
     url: "https://madmeg.org/ma5/",
     start: "5/0.073/0.23",
-    print: "http://madmeg.org/ma5/madmeg-ma5.pdf"
+    print: "https://madmeg.org/ma5/madmeg-ma5.pdf"
   },
   {
     opus: "ma6",
@@ -521,7 +521,7 @@ html`<textarea style="width:100%;height:10em"><!DOCTYPE html>
     cartel: "https://madmeg.org/ma6/cartel-fr.jpg",
     url: "https://madmeg.org/ma6/",
     start: "5/0.355/0.212",
-    print: "http://madmeg.org/ma6/madmeg-ma6.pdf"
+    print: "https://madmeg.org/ma6/madmeg-ma6.pdf"
   },
   {
     opus: "ma7",
@@ -535,7 +535,7 @@ html`<textarea style="width:100%;height:10em"><!DOCTYPE html>
     cartel: "https://madmeg.org/ma7/cartel-fr.jpg",
     url: "https://madmeg.org/ma7/",
     start: "5/0.746/0.269",
-    print: "http://madmeg.org/ma7/madmeg-ma7.pdf"
+    print: "https://madmeg.org/ma7/madmeg-ma7.pdf"
   },
   {
     opus: "mad-meg-fr",
@@ -562,7 +562,7 @@ html`<textarea style="width:100%;height:10em"><!DOCTYPE html>
     cartel: "https://madmeg.org/mb1/cartel-fr.jpg",
     url: "https://madmeg.org/mb1/",
     start: "6/0.319/0.263",
-    print: "http://madmeg.org/mb1/madmeg-mb1.pdf"
+    print: "https://madmeg.org/mb1/madmeg-mb1.pdf"
   },
   {
     opus: "mb10",
@@ -576,7 +576,7 @@ html`<textarea style="width:100%;height:10em"><!DOCTYPE html>
     cartel: "https://madmeg.org/mb10/cartel-fr.jpg",
     url: "https://madmeg.org/mb10/",
     start: "3/0.19/0.24",
-    print: "http://madmeg.org/mb10/madmeg-mb10.pdf"
+    print: "https://madmeg.org/mb10/madmeg-mb10.pdf"
   },
   {
     opus: "mb11",
@@ -591,7 +591,7 @@ html`<textarea style="width:100%;height:10em"><!DOCTYPE html>
     cartel: "https://madmeg.org/mb11/cartel-fr.jpg",
     url: "https://madmeg.org/mb11/",
     start: "5/0.394/0.18",
-    print: "http://madmeg.org/mb11/madmeg-mb11.pdf"
+    print: "https://madmeg.org/mb11/madmeg-mb11.pdf"
   },
   {
     opus: "mb12",
@@ -605,7 +605,7 @@ html`<textarea style="width:100%;height:10em"><!DOCTYPE html>
     cartel: "https://madmeg.org/mb12/cartel-fr.jpg",
     url: "https://madmeg.org/mb12/",
     start: "5/0.277/0.328",
-    print: "http://madmeg.org/mb12/madmeg-mb12.pdf"
+    print: "https://madmeg.org/mb12/madmeg-mb12.pdf"
   },
   {
     opus: "mb2",
@@ -619,7 +619,7 @@ html`<textarea style="width:100%;height:10em"><!DOCTYPE html>
     cartel: "https://madmeg.org/mb2/cartel-fr.jpg",
     url: "https://madmeg.org/mb2/",
     start: "5/0.232/0.309",
-    print: "http://madmeg.org/mb2/madmeg-mb2.pdf"
+    print: "https://madmeg.org/mb2/madmeg-mb2.pdf"
   },
   {
     opus: "mb3",
@@ -633,7 +633,7 @@ html`<textarea style="width:100%;height:10em"><!DOCTYPE html>
     cartel: "https://madmeg.org/mb3/cartel-fr.jpg",
     url: "https://madmeg.org/mb3/",
     start: "5/0.426/0.254",
-    print: "http://madmeg.org/mb3/madmeg-mb3.pdf"
+    print: "https://madmeg.org/mb3/madmeg-mb3.pdf"
   },
   {
     opus: "mb4",
@@ -647,7 +647,7 @@ html`<textarea style="width:100%;height:10em"><!DOCTYPE html>
     cartel: "https://madmeg.org/mb4/cartel-fr.jpg",
     url: "https://madmeg.org/mb4/",
     start: "5/0.306/0.359",
-    print: "http://madmeg.org/mb4/madmeg-mb4.pdf"
+    print: "https://madmeg.org/mb4/madmeg-mb4.pdf"
   },
   {
     opus: "mb5",
@@ -661,7 +661,7 @@ html`<textarea style="width:100%;height:10em"><!DOCTYPE html>
     cartel: "https://madmeg.org/mb5/cartel-fr.jpg",
     url: "https://madmeg.org/mb5/",
     start: "5/0.12/0.267",
-    print: "http://madmeg.org/mb5/madmeg-mb5.pdf"
+    print: "https://madmeg.org/mb5/madmeg-mb5.pdf"
   },
   {
     opus: "mb6",
@@ -675,7 +675,7 @@ html`<textarea style="width:100%;height:10em"><!DOCTYPE html>
     cartel: "https://madmeg.org/mb6/cartel-fr.jpg",
     url: "https://madmeg.org/mb6/",
     start: "5/0.338/0.289",
-    print: "http://madmeg.org/mb6/madmeg-mb6.pdf"
+    print: "https://madmeg.org/mb6/madmeg-mb6.pdf"
   },
   {
     opus: "mb7",
@@ -689,7 +689,7 @@ html`<textarea style="width:100%;height:10em"><!DOCTYPE html>
     cartel: "https://madmeg.org/mb7/cartel-fr.jpg",
     url: "https://madmeg.org/mb7/",
     start: "5/0.347/0.186",
-    print: "http://madmeg.org/mb7/madmeg-mb7.pdf"
+    print: "https://madmeg.org/mb7/madmeg-mb7.pdf"
   },
   {
     opus: "mb8",
@@ -703,7 +703,7 @@ html`<textarea style="width:100%;height:10em"><!DOCTYPE html>
     cartel: "https://madmeg.org/mb8/cartel-fr.jpg",
     url: "https://madmeg.org/mb8/",
     start: "5/0.234/0.593",
-    print: "http://madmeg.org/mb8/madmeg-mb8.pdf"
+    print: "https://madmeg.org/mb8/madmeg-mb8.pdf"
   },
   {
     opus: "mb9",
@@ -717,7 +717,7 @@ html`<textarea style="width:100%;height:10em"><!DOCTYPE html>
     cartel: "https://madmeg.org/mb9/cartel-fr.jpg",
     url: "https://madmeg.org/mb9/",
     start: "5/0.147/0.277",
-    print: "http://madmeg.org/mb9/madmeg-mb9.pdf"
+    print: "https://madmeg.org/mb9/madmeg-mb9.pdf"
   },
   {
     opus: "megeres",
