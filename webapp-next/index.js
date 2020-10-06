@@ -47,6 +47,53 @@ checkbox({
   main.variable(observer()).define(["md","opus"], function(md,opus){return(
 md`[👉 test fullscreen](https://visionscarto.net/obs/?https://observablehq.com/d/7a46653beb6e7167&opus=${opus}&debug=true)`
 )});
+  main.variable(observer("page")).define("page", ["html","dimensions","opus"], function(html,dimensions,opus){return(
+html`<textarea style="width:100%;height:10em"><!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>${dimensions.title || "***TITLE***"} | mad meg (${dimensions.date ||
+  "***2020***"})</title>
+  <meta property="og:image" content="${dimensions.url ||
+    `https://madmeg.org/${opus}`}/vignette-1200x630.jpg">
+
+  <link rel="apple-touch-icon" href="images/apple-touch-icon-72x72.png" />
+  <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png" />
+  <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png" />
+  <link rel="apple-touch-icon" sizes="144x144" href="images/apple-touch-icon-144x144.png" />
+  <link rel="icon" type="image/png" href="images/apple-touch-icon-72x72.png" />
+
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  <script src="../webapp-next/d3.js"></script>
+  <script src="../webapp-next/d3-tile.min.js"></script>
+</head>
+
+<div id="observablehq-2f159cd7">
+  <div class="observablehq-wrapper"></div>
+</div>
+
+<script>
+  var opus = ${JSON.stringify(opus)};
+</script>
+
+<script type="module">
+  import {Runtime, Inspector} from "../webapp-next/runtime.js";
+  import define from "../webapp-next/index.js";
+  const run = new Runtime().module(define, name => {
+    if (name === "map" || name === "resizer") return Inspector.into("#observablehq-2f159cd7 .observablehq-wrapper")();
+  });
+  if (document.location.search.match(/debug/)) run.redefine("dodebug", true);
+  if (d3.select && d3.tile) run.redefine("d3", d3);
+
+  run.redefine("opus", opus);
+
+/*
+  run.redefine("dimensions", ${JSON.stringify(dimensions, null, 2)});
+*/
+</script>
+`
+)});
   main.variable(observer("resizer")).define("resizer", ["map","viewport","html"], function(map,viewport,html)
 {
   map.resize(viewport);
