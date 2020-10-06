@@ -3,18 +3,18 @@ export default function define(runtime, observer) {
   main.variable(observer()).define(["md"], function(md){return(
 md`# madmeg next`
 )});
-  main.variable(observer("map")).define("map", ["addDetails","addOverlay","animateCanvas","addControls","d3","style"], function(addDetails,addOverlay,animateCanvas,addControls,d3,style)
+  main.variable(observer("map")).define("map", ["addInfo","addOverlay","animateCanvas","addControls","d3","style"], function(addInfo,addOverlay,animateCanvas,addControls,d3,style)
 {
   const div = document.createElement("div");
   const canvas = document.createElement("canvas");
-  const details = addDetails(div, canvas);
+  const details = addInfo(div, canvas, "cartel");
+  const info = addInfo(div, canvas, "info");
   const overlay = addOverlay(div, canvas);
 
   div.appendChild(canvas);
   div.resize = animateCanvas(div);
-  details.hide();
   overlay.hide();
-  addControls(div, canvas, details, overlay);
+  addControls(div, canvas, details, info, overlay);
 
   d3.select(div).append(() => style);
   d3.select("body").classed(
@@ -27,7 +27,7 @@ md`# madmeg next`
 );
   main.variable(observer("viewof opus")).define("viewof opus", ["settings","select"], function(settings,select)
 {
-  const options = Object.keys(settings);
+  const options = settings.map(d => d.opus);
   let value = (document.location.search || "").match(/opus=([^=?&]+)/);
   value = value && value[1];
   if (!options.includes(value)) value = "delices-en";
@@ -236,7 +236,7 @@ md`[👉 test fullscreen](https://visionscarto.net/obs/?https://observablehq.com
 }
 )});
   main.variable(observer("dimensions")).define("dimensions", ["settings","opus"], function(settings,opus){return(
-settings[opus]
+settings.filter(d => d.opus === opus)[0]
 )});
   main.variable(observer()).define(["md"], function(md){return(
 md`TODO:
@@ -394,6 +394,18 @@ button.video {
   background-image: url(https://madmeg.org/tiles-webapp/images/icon-video.png);
   background-size: cover
 }
+button.print {
+  background-image: url(https://madmeg.org/tiles-webapp/images/icon-print.png);
+}
+button.info {
+  background-image: url(https://madmeg.org/tiles-webapp/images/icon-infos.png);
+}
+button.fold {
+  background-image: url(https://madmeg.org/tiles-webapp/images/icon-fold.png);
+}
+button.playlist {
+  background-image: url(https://madmeg.org/tiles-webapp/images/icon-playlist.png);
+}
 button:focus { outline: none; }
 
 
@@ -436,8 +448,16 @@ button:focus { outline: none; }
 }
 `
 )});
-  main.variable(observer("addDetails")).define("addDetails", ["d3","dimensions"], function(d3,dimensions){return(
+  main.variable(observer("addDetails")).define("addDetails", ["addInfo"], function(addInfo){return(
 function addDetails(node, canvas) {
+  return addInfo(node, canvas, 'cartel');
+}
+)});
+  main.variable(observer("addInfo")).define("addInfo", ["dimensions","d3"], function(dimensions,d3){return(
+function addInfo(node, canvas, type) {
+  const src = dimensions[type];
+  if (!src) return;
+
   const details = d3
     .select(node)
     .insert("div", "canvas")
@@ -446,30 +466,31 @@ function addDetails(node, canvas) {
     .attr("class", "bg")
     .on("click", hide);
 
-  d3.select(document.documentElement).on("keydown.escDetails", e => {
+  d3.select(document.documentElement).on(`keydown.esc${type}`, e => {
     if ((e.keyCode || e.which) === 27) {
       console.log("esc");
       hide();
     }
   });
 
-  if (dimensions.cartel) {
-    details.node().show = function() {
-      details
-        .style("width", `${node.clientWidth + 16}px`)
-        .style("height", `${node.clientHeight}px`)
-        .style("display", "flex")
-        .html("");
-      const im = details
-        .append("div")
-        .attr("class", "cartel")
-        .append("img")
-        .attr("src", dimensions.cartel);
-      im.style("max-width", `${Math.min(600, node.clientWidth) - 20}px`);
-    };
-  }
+  details.node().show = function() {
+    console.log("showing", src);
+    details
+      .style("width", `${node.clientWidth + 16}px`)
+      .style("height", `${node.clientHeight}px`)
+      .style("display", "flex")
+      .html("");
+    const im = details
+      .append("div")
+      .attr("class", type)
+      .append("img")
+      .attr("src", src);
+    im.style("max-width", `${Math.min(600, node.clientWidth) - 20}px`);
+  };
 
   details.node().hide = hide;
+
+  hide();
 
   return details.node();
 
@@ -569,7 +590,7 @@ function animateCanvas(div) {
     tiler.extent([[0, 0], [width, height]]);
 
     if (dimensions.translateExtent)
-      zoom.translateExtent(dimensions.translateExtent);
+      zoom.translateExtent(JSON.parse(dimensions.translateExtent));
 
     context.globalAlpha = 1;
 
@@ -739,7 +760,9 @@ function animateCanvas(div) {
     if (!tr) {
       const tt = getIniTransform(
         document.location.hash,
-        dimensions.start,
+        typeof dimensions.start === "object"
+          ? dimensions.start
+          : (dimensions.start || "").split("/"),
         viewport.width,
         viewport.height
       );
@@ -803,7 +826,7 @@ function acceptable([x, y, z]) {
 }
 )});
   main.variable(observer("addControls")).define("addControls", ["d3","dimensions"], function(d3,dimensions){return(
-function addControls(node, canvas, details, overlay) {
+function addControls(node, canvas, details, info, overlay) {
   const controls = d3
     .select(node)
     .insert("div", "canvas")
@@ -834,12 +857,22 @@ function addControls(node, canvas, details, overlay) {
       });
   }
 
-  if (dimensions.cartel)
+  if (details)
     bar2
       .append("button")
       .text("?")
       .classed("cartel", true)
       .on("click", () => details.show());
+
+  if (info)
+    bar2
+      .append("button")
+      .text("info")
+      .classed("info", true)
+      .on("click", () => {
+        console.log(info);
+        info.show();
+      });
 
   if (dimensions.video)
     bar2
@@ -870,6 +903,30 @@ function addControls(node, canvas, details, overlay) {
       .append("button")
       .text("shop")
       .classed("shop", true);
+
+  if (dimensions.print)
+    bar2
+      .append("a")
+      .attr("href", dimensions.print)
+      .append("button")
+      .text("print")
+      .classed("print", true);
+
+  if (dimensions.fold)
+    bar2
+      .append("a")
+      .attr("href", dimensions.fold)
+      .append("button")
+      .text("fold")
+      .classed("fold", true);
+
+  if (dimensions.playlist)
+    bar2
+      .append("a")
+      .attr("href", dimensions.playlist)
+      .append("button")
+      .text("playlist")
+      .classed("playlist", true);
 
   bar2
     .append("a")
