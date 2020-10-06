@@ -1229,39 +1229,39 @@ button {
   overflow: hidden;
 }
 button.zoom-in {
-  background-image: url(https://madmeg.org/tiles-webapp/images/icon-zoom-in.png);
+  background-image: url(https://madmeg.org/webapp-next/images/icon-zoom-in.png);
 }
 button.zoom-out {
-  background-image: url(https://madmeg.org/tiles-webapp/images/icon-zoom-out.png);
+  background-image: url(https://madmeg.org/webapp-next/images/icon-zoom-out.png);
 }
 button.cartel {
-  background-image: url(https://madmeg.org/tiles-webapp/images/icon-cartel.png);
+  background-image: url(https://madmeg.org/webapp-next/images/icon-cartel.png);
 }
 button.fullscreen {
-  background-image: url(https://madmeg.org/tiles-webapp/images/icon-fullscreen.png);
+  background-image: url(https://madmeg.org/webapp-next/images/icon-fullscreen.png);
 }
 button.home {
-  background-image: url(https://madmeg.org/tiles-webapp/images/icon-home.png);
+  background-image: url(https://madmeg.org/webapp-next/images/icon-home.png);
   height: 60px;
 }
 button.shop {
-  background-image: url(https://madmeg.org/tiles-webapp/images/icon-shop.png);
+  background-image: url(https://madmeg.org/webapp-next/images/icon-shop.png);
 }
 button.video {
-  background-image: url(https://madmeg.org/tiles-webapp/images/icon-video.png);
+  background-image: url(https://madmeg.org/webapp-next/images/icon-video.png);
   background-size: cover
 }
 button.print {
-  background-image: url(https://madmeg.org/tiles-webapp/images/icon-print.png);
+  background-image: url(https://madmeg.org/webapp-next/images/icon-print.png);
 }
 button.info {
-  background-image: url(https://madmeg.org/tiles-webapp/images/icon-infos.png);
+  background-image: url(https://madmeg.org/webapp-next/images/icon-infos.png);
 }
 button.fold {
-  background-image: url(https://madmeg.org/tiles-webapp/images/icon-fold.png);
+  background-image: url(https://madmeg.org/webapp-next/images/icon-fold.png);
 }
 button.playlist {
-  background-image: url(https://madmeg.org/tiles-webapp/images/icon-playlist.png);
+  background-image: url(https://madmeg.org/webapp-next/images/icon-playlist.png);
 }
 button:focus { outline: none; }
 
