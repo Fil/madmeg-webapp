@@ -1,40 +1,41 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Le Jardin des délices | mad meg (2004-2011-2012)</title>
-  <meta property="og:image" content="https://madmeg.org/delizie/vignette-1200x630.jpg">
+<html><head><meta charset="utf-8"/>
 
-  <link rel="apple-touch-icon" href="images/apple-touch-icon-72x72.png" />
-  <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png" />
-  <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png" />
-  <link rel="apple-touch-icon" sizes="144x144" href="images/apple-touch-icon-144x144.png" />
-  <link rel="icon" type="image/png" href="images/apple-touch-icon-72x72.png" />
+<title>Le Jardin des délices | mad meg (2004-2011-2012)</title>
 
-  <meta name="apple-mobile-web-app-capable" content="yes" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-  <script src="../webapp-next/d3.js"></script>
-  <script src="../webapp-next/d3-tile.min.js"></script>
+<meta property="og:image" content="https://madmeg.org/delizie/vignette-1200x630.jpg">
+<link rel="apple-touch-icon" href="images/apple-touch-icon-72x72.png" />
+<link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png" />
+<link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png" />
+<link rel="apple-touch-icon" sizes="144x144" href="images/apple-touch-icon-144x144.png" />
+<link rel="icon" type="image/png" href="images/apple-touch-icon-72x72.png" />
+
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+
+<script src="../webapp-next/d3.js"></script>
+<script src="../webapp-next/d3-tile.min.js"></script>
 </head>
 
-<div id="observablehq-2f159cd7">
-  <div class="observablehq-wrapper"></div>
-</div>
+<div id="wrapper"><div></div></div>
 
 <script>
-  // langue du visiteur, soit dans l'url ?lang=fr soit dans la config navigateur
+
   let lang = document.location.search.match(/lang=(\w+)/);
-  lang = ( lang ? lang[1] : (navigator.userLanguage || navigator.language) ) || null;
-  var opus = lang == 'fr' ? 'delices-fr'
-           : lang == 'it' ? 'delices-it'
-           :                'delices-en' // defaut
+  lang = (lang ? lang[1] : (navigator.userLanguage || navigator.language)) || null;
+
+  var opus = lang == 'en' ? "delices-en"
+           : lang == 'fr' ? "delices-fr"
+           : lang == 'it' ? "delices-it"
+           : "delices-en";
+
 </script>
 
 <script type="module">
   import {Runtime, Inspector} from "../webapp-next/runtime.js";
   import define from "../webapp-next/index.js";
   const run = new Runtime().module(define, name => {
-    if (name === "map" || name === "resizer") return Inspector.into("#observablehq-2f159cd7 .observablehq-wrapper")();
+    if (name === "map" || name === "resizer") return Inspector.into("#wrapper")();
   });
   if (document.location.search.match(/debug/)) run.redefine("dodebug", true);
   if (d3.select && d3.tile) run.redefine("d3", d3);
@@ -42,16 +43,22 @@
   run.redefine("opus", opus);
 
 /*
+
   run.redefine("dimensions", {
-    w: 19859,
-    h: 27369,
-    s: 512,
-    minZ: 6,
-    addZ: 4,
-    cartel: "./cartel-fr.jpg",
-    start: [2, .82, .56]
-  });
+  "opus": "delices-fr",
+  "title": "Le Jardin des délices",
+  "date": "2004-2011-2012",
+  "w": 33328,
+  "h": 23400,
+  "s": 512,
+  "minZ": 2,
+  "addZ": 0.2,
+  "lang": "en,fr,it",
+  "cartel": "https://madmeg.org/delizie/cartel-fr.jpg",
+  "url": "https://madmeg.org/delizie/",
+  "referentiel": 1,
+  "start": "2/0.4/0.5"
+});
+
 */
 </script>
-
-
