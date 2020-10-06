@@ -75,18 +75,22 @@ html`<textarea style="width:100%;height:10em"><!DOCTYPE html>
 
 <script>
 ${
-  dimensions.langs
+  dimensions.lang
     ? `
   let lang = document.location.search.match(/lang=(\\w+)/);
   lang = (lang ? lang[1] : (navigator.userLanguage || navigator.language)) || null;
 `
     : ""
 }
-  var opus = ${(dimensions.langs || "").split(/,/).map(
-    lang =>
-      `lang == '${lang}' ? ${JSON.stringify(opus.replace("_fr", `_${lang}`))}
+  var opus = ${(dimensions.lang || "")
+    .split(/,/)
+    .filter(d => d)
+    .map(
+      lang =>
+        `lang == '${lang}' ? ${JSON.stringify(opus.replace(/fr$/, `${lang}`))}
            : `
-  )}${JSON.stringify(opus.replace("_fr", `_en`))};
+    )}${JSON.stringify(opus.replace(/fr$/, `en`))};
+
 </script>
 
 <script type="module">
@@ -161,7 +165,7 @@ ${
     opus: "atheniennes2014_fr",
     title: "Angela &amp; Olympe",
     date: "2013-2014",
-    langs: "fr,en",
+    lang: "fr,en",
     w: 17538,
     h: 24401,
     s: 256,
@@ -175,7 +179,7 @@ ${
     opus: "atheniennes2014_en",
     title: "Angela &amp; Olympe",
     date: "2013-2014",
-    langs: "fr,en",
+    lang: "fr,en",
     w: 17538,
     h: 24401,
     s: 256,
