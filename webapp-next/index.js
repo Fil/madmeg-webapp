@@ -92,7 +92,7 @@ html`<textarea style="width:100%;height:10em"><!DOCTYPE html>
 
 */
 </script>
-`
+</textarea>`
 )});
   main.variable(observer("resizer")).define("resizer", ["map","viewport","html"], function(map,viewport,html)
 {
@@ -128,7 +128,7 @@ html`<textarea style="width:100%;height:10em"><!DOCTYPE html>
   },
   {
     opus: "alphabet",
-    title: "L'alpha-Bête",
+    title: "L’alpha-Bête",
     date: "2020",
     w: 19859,
     h: 27369,
@@ -1249,7 +1249,7 @@ button.shop {
 }
 button.video {
   background-image: url(https://madmeg.org/webapp-next/images/icon-video.png);
-  background-size: cover
+  background-size: cover;
 }
 button.print {
   background-image: url(https://madmeg.org/webapp-next/images/icon-print.png);
