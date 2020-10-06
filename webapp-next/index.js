@@ -1652,9 +1652,16 @@ function animateCanvas(div) {
   main.variable(observer("deltas")).define("deltas", function(){return(
 [-100, -7, -6, -5, -4, -3, -2, -1, 0]
 )});
-  main.variable(observer("url")).define("url", ["opus","dimensions"], function(opus,dimensions){return(
-(x, y, z) =>
-  `https://madmeg.org/tiles/${opus}/${dimensions.s}/${z}/${x}/${y}.jpg`
+  main.variable(observer("url")).define("url", ["tileroot"], function(tileroot){return(
+(x, y, z) => `${tileroot}/${z}/${x}/${y}.png`
+)});
+  main.variable(observer("tileroot")).define("tileroot", ["tilehost","opus","dimensions"], function(tilehost,opus,dimensions){return(
+`${tilehost}/tiles/${opus}/${dimensions.s}`
+)});
+  main.variable(observer("tilehost")).define("tilehost", ["dodebug"], function(dodebug){return(
+dodebug
+  ? "https://madmeg.org"
+  : "https://d369222diwx7zl.cloudfront.net"
 )});
   main.variable(observer("cache")).define("cache", function()
 {
