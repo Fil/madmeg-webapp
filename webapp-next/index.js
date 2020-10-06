@@ -51,8 +51,10 @@ md`[👉 test fullscreen](https://visionscarto.net/obs/?https://observablehq.com
 html`<textarea style="width:100%;height:10em"><!DOCTYPE html>
 <html><head><meta charset="utf-8"/>
 
-<title>${dimensions.title || "***TITLE***"} | mad meg (${dimensions.date ||
-  "***2020***"})</title>
+<title>${(dimensions.title || "***TITLE***").replace(
+  /&/g,
+  "&amp;"
+)} | mad meg (${dimensions.date || "***2020***"})</title>
 
 <meta property="og:image" content="${dimensions.url ||
   `https://madmeg.org/${opus}/`}vignette-1200x630.jpg">
@@ -72,7 +74,19 @@ html`<textarea style="width:100%;height:10em"><!DOCTYPE html>
 <div id="wrapper"><div></div></div>
 
 <script>
-  var opus = ${JSON.stringify(opus)};
+${
+  dimensions.langs
+    ? `
+  let lang = document.location.search.match(/lang=(\\w+)/);
+  lang = (lang ? lang[1] : (navigator.userLanguage || navigator.language)) || null;
+`
+    : ""
+}
+  var opus = ${(dimensions.langs || "").split(/,/).map(
+    lang =>
+      `lang == '${lang}' ? ${JSON.stringify(opus.replace("_fr", `_${lang}`))}
+           : `
+  )}${JSON.stringify(opus.replace("_fr", `_en`))};
 </script>
 
 <script type="module">
@@ -88,7 +102,10 @@ html`<textarea style="width:100%;height:10em"><!DOCTYPE html>
 
 /*
 
-  run.redefine("dimensions", ${JSON.stringify(dimensions, null, 2)});
+  run.redefine("dimensions", ${JSON.stringify(dimensions, null, 2).replace(
+    /&/g,
+    "&amp;"
+  )});
 
 */
 </script>
@@ -144,12 +161,27 @@ html`<textarea style="width:100%;height:10em"><!DOCTYPE html>
     opus: "atheniennes2014_fr",
     title: "Angela &amp; Olympe",
     date: "2013-2014",
+    langs: "fr,en",
     w: 17538,
     h: 24401,
     s: 256,
     minZ: 1,
     addZ: 0.2,
-    cartel: "https://madmeg.org/atheniennes2014_fr/cartel-fr.jpg",
+    cartel: "https://madmeg.org/athena/cartel-fr.jpg",
+    url: "https://madmeg.org/athena/",
+    start: "7/0.026/0.355"
+  },
+  {
+    opus: "atheniennes2014_en",
+    title: "Angela &amp; Olympe",
+    date: "2013-2014",
+    langs: "fr,en",
+    w: 17538,
+    h: 24401,
+    s: 256,
+    minZ: 1,
+    addZ: 0.2,
+    cartel: "https://madmeg.org/athena/cartel-fr.jpg",
     url: "https://madmeg.org/athena/",
     start: "7/0.026/0.355"
   },
