@@ -380,13 +380,14 @@ ${
     w: 12532,
     h: 7052,
     s: 256,
+    lang: "fr,en",
     minZ: 2,
     addZ: 0.2,
-    cartel: "https://madmeg.org/fezouata/cartel-fr.jpg",
+    cartel: "https://madmeg.org/fezouata/cartel-fr.jpg", // -en
     url: "https://madmeg.org/fezouata/",
     start: "3/0.21/0.37",
     shop: "https://www.madmeg.org/base/shop/Fezouata.html",
-    info: "https://madmeg.org/fezouata/infos-fr.jpg"
+    info: "https://madmeg.org/fezouata/infos-fr.jpg" // -en
   },
   {
     opus: "fukushima",
