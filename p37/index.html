@@ -1,34 +1,35 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Patriarche n°37 | mad meg (2018)</title>
-  <meta property="og:image" content="https://madmeg.org/p37/vignette-1200x630.jpg">
-  <link rel="apple-touch-icon" href="images/apple-touch-icon-72x72.png" />
-  <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png" />
-  <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png" />
-  <link rel="apple-touch-icon" sizes="144x144" href="images/apple-touch-icon-144x144.png" />
-  <link rel="icon" type="image/png" href="images/apple-touch-icon-72x72.png" />
+<html><head><meta charset="utf-8"/>
 
-  <meta name="apple-mobile-web-app-capable" content="yes" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-  <script src="../webapp-next/d3.js"></script>
-  <script src="../webapp-next/d3-tile.min.js"></script>
+<title>Patriarche n°37 | mad meg (2018)</title>
+
+<meta property="og:image" content="https://madmeg.org/p37/vignette-1200x630.jpg">
+<link rel="apple-touch-icon" href="images/apple-touch-icon-72x72.png" />
+<link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png" />
+<link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png" />
+<link rel="apple-touch-icon" sizes="144x144" href="images/apple-touch-icon-144x144.png" />
+<link rel="icon" type="image/png" href="images/apple-touch-icon-72x72.png" />
+
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+
+<script src="../webapp-next/d3.js"></script>
+<script src="../webapp-next/d3-tile.min.js"></script>
 </head>
 
-<div id="observablehq-2f159cd7">
-  <div class="observablehq-wrapper"></div>
-</div>
+<div id="wrapper"><div></div></div>
 
 <script>
-  var opus = 'p37';
+
+  var opus = "p37";
+
 </script>
 
 <script type="module">
   import {Runtime, Inspector} from "../webapp-next/runtime.js";
   import define from "../webapp-next/index.js";
   const run = new Runtime().module(define, name => {
-    if (name === "map" || name === "resizer") return Inspector.into("#observablehq-2f159cd7 .observablehq-wrapper")();
+    if (name === "map" || name === "resizer") return Inspector.into("#wrapper")();
   });
   if (document.location.search.match(/debug/)) run.redefine("dodebug", true);
   if (d3.select && d3.tile) run.redefine("d3", d3);
@@ -36,14 +37,19 @@
   run.redefine("opus", opus);
 
 /*
+
   run.redefine("dimensions", {
-    w: 19859,
-    h: 27369,
-    s: 512,
-    minZ: 6,
-    addZ: 4,
-    cartel: "./cartel-fr.jpg",
-    start: [2, .82, .56]
-  });
+  "opus": "p37",
+  "title": "Patriarche n°37",
+  "date": "2018",
+  "w": 10933,
+  "h": 25700,
+  "s": 256,
+  "minZ": 1,
+  "start": "3/0.24/0.11",
+  "cartel": "https://madmeg.org/p37/cartel-fr.jpg",
+  "url": "https://madmeg.org/p37/"
+});
+
 */
 </script>

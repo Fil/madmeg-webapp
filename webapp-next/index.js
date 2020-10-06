@@ -835,7 +835,7 @@ ${
   {
     opus: "p136",
     title: "Patriarche n°136",
-    date: "",
+    date: "2019",
     w: 10425,
     h: 12979,
     s: 512,
@@ -847,7 +847,7 @@ ${
   {
     opus: "p137",
     title: "Patriarche n°137",
-    date: "",
+    date: "2019",
     w: 9791,
     h: 17644,
     s: 512,
@@ -859,7 +859,7 @@ ${
   {
     opus: "p138",
     title: "Patriarche n°138",
-    date: "",
+    date: "2019",
     w: 17236,
     h: 21818,
     s: 512,
@@ -975,7 +975,7 @@ ${
   {
     opus: "p37",
     title: "Patriarche n°37",
-    date: "",
+    date: "2018",
     w: 10933,
     h: 25700,
     s: 256,
@@ -1052,7 +1052,7 @@ ${
   {
     opus: "p8",
     title: "Patriarche n°8",
-    date: "",
+    date: "2019",
     w: 9148,
     h: 12324,
     s: 512,
@@ -1064,7 +1064,7 @@ ${
   {
     opus: "p81",
     title: "Patriarche n°81",
-    date: "",
+    date: "2020",
     w: 10142,
     h: 22259,
     s: 512,
@@ -1082,7 +1082,7 @@ ${
     s: 256,
     minZ: 1,
     addZ: 0.2,
-    cartel: "https://madmeg.org/patriarche4/cartel-fr.jpg",
+    cartel: "https://madmeg.org/p4/cartel-fr.jpg",
     url: "https://madmeg.org/p4/",
     start: "6/0.216/0.228"
   },

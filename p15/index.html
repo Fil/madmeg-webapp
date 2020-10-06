@@ -1,61 +1,56 @@
 <!DOCTYPE html>
-<html>
-<head>
+<html><head><meta charset="utf-8"/>
+
 <title>Patriarche n°15 | mad meg (2018)</title>
 
 <meta property="og:image" content="https://madmeg.org/p15/vignette-1200x630.jpg">
-
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="apple-mobile-web-app-capable" content="yes" />
-
-<script>
-
-	var image = { w:9504, h:24768 };
-
-	// langue du visiteur, soit dans l'url ?lang=fr
-	// soit dans la config navigateur
-	var lang = (""+window.location).match(/\?lang=(\w+)/);
-	lang = ( lang ? lang[1] : (navigator.userLanguage || navigator.language) )
-		|| null;
-
-	var opus = (lang == 'fr') ? 'epoux-fr'
-			 : ((lang == 'it') ? 'epoux-it' // italien
-			 :                  'epoux-en' // defaut
-			 ); 
-
-	var opus = 'p15';
-
-	var tileSize = 256;
-
-	var tileserver = '../tiles/'+ opus +'/'+tileSize+'/{z}/{x}/{y}.jpg';
-
-	var zoomInitial = 4;
-	var center = [0.13,0.14];
-
-	var minZoom = 1;
-
-    var cartel = 'cartel-fr.jpg';
-
-</script>
-
-<!-- ce bloc si on a des icones speciales dans images/ -->
 <link rel="apple-touch-icon" href="images/apple-touch-icon-72x72.png" />
 <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png" />
 <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png" />
 <link rel="apple-touch-icon" sizes="144x144" href="images/apple-touch-icon-144x144.png" />
 <link rel="icon" type="image/png" href="images/apple-touch-icon-72x72.png" />
 
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 
-<link rel="stylesheet" href="../tiles-webapp/leaflet.css" />
-<link rel="stylesheet" href="../tiles-webapp/webapp.css" />
-
+<script src="../webapp-next/d3.js"></script>
+<script src="../webapp-next/d3-tile.min.js"></script>
 </head>
-<body></body>
 
-<script src="../tiles-webapp/leaflet.js" type="text/javascript"></script>
-<script src="../tiles-webapp/Control.FullScreen.js" type="text/javascript"></script>
-<script src="../tiles-webapp/jquery.min.js" type="text/javascript"></script>
-<script src="../tiles-webapp/leaflet-hash.js" type="text/javascript"></script>
-<script src="../tiles-webapp/webapp-main.js"></script>
-</html>
+<div id="wrapper"><div></div></div>
+
+<script>
+
+  var opus = "p15";
+
+</script>
+
+<script type="module">
+  import {Runtime, Inspector} from "../webapp-next/runtime.js";
+  import define from "../webapp-next/index.js";
+  const run = new Runtime().module(define, name => {
+    if (name === "map" || name === "resizer") return Inspector.into("#wrapper")();
+  });
+  if (document.location.search.match(/debug/)) run.redefine("dodebug", true);
+  if (d3.select && d3.tile) run.redefine("d3", d3);
+
+  run.redefine("opus", opus);
+
+/*
+
+  run.redefine("dimensions", {
+  "opus": "p15",
+  "title": "Patriarche n°15",
+  "date": "2018",
+  "w": 9504,
+  "h": 24768,
+  "s": 256,
+  "minZ": 1,
+  "addZ": 0.2,
+  "cartel": "https://madmeg.org/p15/cartel-fr.jpg",
+  "url": "https://madmeg.org/p15/",
+  "start": "4/0.13/0.14"
+});
+
+*/
+</script>
