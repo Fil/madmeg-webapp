@@ -443,7 +443,7 @@ ${
     aspectRatio: "yes"
   },
   {
-    opus: "jiando-normal",
+    opus: "jiando-normal", // pour le cas ou le script special serait cassé
     title: "La tentation de Jiando",
     date: "2020",
     w: 26107,
