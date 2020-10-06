@@ -489,11 +489,13 @@ ${
     w: 16384,
     h: 1462,
     s: 256,
-    minZ: 3,
+    minZ: 4,
     addZ: 0.2,
     cartel: "https://madmeg.org/lisboa/cartel-fr.jpg",
     url: "https://madmeg.org/lisboa/",
-    start: "5/83.44/-169.585"
+    wrap: true,
+    translateExtent: "[[-180000, -0.52], [180000, -0.40]]",
+    start: "5/0.045/0.029"
   },
   {
     opus: "ma1",
