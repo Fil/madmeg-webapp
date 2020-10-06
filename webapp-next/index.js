@@ -414,7 +414,8 @@ ${
     addZ: 0.2,
     cartel: "https://madmeg.org/giletsjaunes/cartel-fr.jpg",
     url: "https://madmeg.org/giletsjaunes/",
-    start: "3/0.2/0.3"
+    start: "3/0.2/0.3",
+    print: "https://madmeg.org/giletsjaunes/giletsjaunes.zip"
   },
   {
     opus: "jacsmkee",
