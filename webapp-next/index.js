@@ -1538,6 +1538,11 @@ function animateCanvas(div) {
 
     context.globalAlpha = 1;
 
+    // avoid slow FF
+    // https://bugzilla.mozilla.org/show_bug.cgi?id=1602299
+    if (navigator.userAgent.toLowerCase().indexOf('firefox') > -1)
+      context.imageSmoothingEnabled = false;
+
     toload.length = 0;
 
     for (const delta of deltas) {
