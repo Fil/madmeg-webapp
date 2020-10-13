@@ -1504,7 +1504,7 @@ d3
   .tileSize(tileSize)
   .clampX(false)
 )});
-  main.variable(observer("animateCanvas")).define("animateCanvas", ["d3","tiler","dimensions","deltas","acceptable","url","cache","dodebug","tileSize","minZ","maxZzoom","history","hash","getIniTransform"], function(d3,tiler,dimensions,deltas,acceptable,url,cache,dodebug,tileSize,minZ,maxZzoom,history,hash,getIniTransform){return(
+  main.variable(observer("animateCanvas")).define("animateCanvas", ["d3","tiler","dimensions","deltas","acceptable","url","cache","dodebug","debounce","history","hash","tileSize","minZ","maxZzoom","getIniTransform"], function(d3,tiler,dimensions,deltas,acceptable,url,cache,dodebug,debounce,history,hash,tileSize,minZ,maxZzoom,getIniTransform){return(
 function animateCanvas(div) {
   const canvas = d3
     .select(div)
@@ -1662,6 +1662,11 @@ function animateCanvas(div) {
     }
   }
 
+  const replaceState = debounce(() => {
+    try {
+      history.replaceState(null, '', hash(tr, width, height));
+    } catch (e) {}
+  }, 250);
   zoom
     // .translateExtent([[-.60, -.60], [.10, -.10]]) // world coordinates
     .scaleExtent([
@@ -1671,11 +1676,7 @@ function animateCanvas(div) {
     .on("zoom", ({ transform }) => {
       tr = transform;
       refresh();
-      if (width && height) {
-        try {
-          history.replaceState(null, '', hash(tr, width, height));
-        } catch (e) {}
-      }
+      if (width && height) replaceState();
     });
 
   canvas.zoomIn = () =>
@@ -1962,6 +1963,23 @@ md`## Utilities`
 )});
   main.variable(observer("d3")).define("d3", ["require"], function(require){return(
 require("d3-selection@2", "d3-transition@2", "d3-zoom@2", "d3-tile@1")
+)});
+  main.variable(observer("debounce")).define("debounce", function(){return(
+function debounce(func, wait, immediate) {
+  var timeout;
+  return function() {
+    var context = this,
+      args = arguments;
+    var later = function() {
+      timeout = null;
+      if (!immediate) func.apply(context, args);
+    };
+    var callNow = immediate && !timeout;
+    clearTimeout(timeout);
+    timeout = setTimeout(later, wait);
+    if (callNow) func.apply(context, args);
+  };
+}
 )});
   main.variable(observer("select")).define("select", ["html"], function(html){return(
 function select({ options, value, description }) {
